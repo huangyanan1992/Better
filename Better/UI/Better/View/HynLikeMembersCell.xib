@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HynLikeMembersCell" id="KGk-i7-Jjw" customClass="HynLikeMembersCell" customModule="Better" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="评论" translatesAutoresizingMaskIntoConstraints="NO" id="ygn-2O-kqy"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2o-zO-zbm">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7n8-OV-q7f">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="41" id="3o0-C8-gBr"/>
+                            <constraint firstAttribute="height" constant="18" id="QhJ-Iu-6eW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="赞" image="真赞">
+                            <color key="titleColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="likeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0Rf-AQ-EZL"/>
+                        </connections>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7bt-kb-STT">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="l0l-JA-DWY"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="muD-cV-T5M">
+                            <size key="itemSize" width="20" height="20"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="zQb-WV-t5J"/>
+                            <outlet property="delegate" destination="-1" id="xkX-od-fLs"/>
+                        </connections>
+                    </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaw-W8-AN9">
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="5" id="QEL-tH-HHS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7n8-OV-q7f" firstAttribute="top" secondItem="ygn-2O-kqy" secondAttribute="top" constant="-2" id="6ko-bA-fxY"/>
+                    <constraint firstAttribute="trailing" secondItem="vaw-W8-AN9" secondAttribute="trailing" id="IBS-MB-0MM"/>
+                    <constraint firstItem="7n8-OV-q7f" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-2.5" id="LOR-yh-aAY"/>
+                    <constraint firstItem="7bt-kb-STT" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="2/5" id="SAx-tN-x7u"/>
+                    <constraint firstItem="ygn-2O-kqy" firstAttribute="leading" secondItem="7n8-OV-q7f" secondAttribute="trailing" constant="15" id="Swb-io-8Yd"/>
+                    <constraint firstItem="7bt-kb-STT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Sx6-2D-9tN"/>
+                    <constraint firstItem="7bt-kb-STT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-2.5" id="W6f-hW-k2H"/>
+                    <constraint firstAttribute="trailing" secondItem="Z2o-zO-zbm" secondAttribute="trailing" constant="5" id="dIW-Xr-XP3"/>
+                    <constraint firstItem="7n8-OV-q7f" firstAttribute="centerY" secondItem="ygn-2O-kqy" secondAttribute="centerY" id="h9h-bn-i8c"/>
+                    <constraint firstItem="Z2o-zO-zbm" firstAttribute="centerY" secondItem="ygn-2O-kqy" secondAttribute="centerY" id="hXc-eo-oiS"/>
+                    <constraint firstItem="Z2o-zO-zbm" firstAttribute="leading" secondItem="ygn-2O-kqy" secondAttribute="trailing" constant="5" id="heP-SZ-AlC"/>
+                    <constraint firstItem="vaw-W8-AN9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="iOF-bk-qvO"/>
+                    <constraint firstAttribute="bottom" secondItem="vaw-W8-AN9" secondAttribute="bottom" id="x3l-y7-WBW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="7bt-kb-STT" id="Enp-1P-t1c"/>
+                <outlet property="commondImageView" destination="ygn-2O-kqy" id="S6I-mv-GX8"/>
+                <outlet property="commondLabel" destination="Z2o-zO-zbm" id="OMR-zZ-iaD"/>
+                <outlet property="likeBtn" destination="7n8-OV-q7f" id="22G-9f-x8J"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="真赞" width="18" height="18"/>
+        <image name="评论" width="18" height="18"/>
+    </resources>
+</document>

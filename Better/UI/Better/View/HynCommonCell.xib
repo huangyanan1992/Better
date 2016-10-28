@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HynCommonCell" id="KGk-i7-Jjw" customClass="HynCommonCell" customModule="Better" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCy-uE-Xrt" customClass="HynButton" customModule="Better" customModuleProvider="target">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="HOy-1m-NJA"/>
+                            <constraint firstAttribute="height" constant="30" id="Wkj-TM-7MT"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadios">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="avatarAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BoC-uP-Xmj"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEy-47-w5R">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="Huigong">
+                            <color key="titleColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="avatarAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8JE-Vt-fKt"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6c-f1-FOO">
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1楼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEf-zh-RpU">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6天前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSc-ny-hlo">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.64313725489999995" green="0.64313725489999995" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWN-OH-Ljv">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="举报">
+                            <color key="titleColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="reportAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mis-Yi-fdV"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIm-ZR-8R7">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="pAw-1n-AoB"/>
+                            <constraint firstAttribute="width" constant="30" id="uXn-Zf-rql"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="赞" image="真赞">
+                            <color key="titleColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="likeAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Z0d-0t-sKk"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIH-lD-5Kx">
+                        <state key="normal" image="评论"/>
+                        <connections>
+                            <action selector="commondAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3Cy-WQ-zrH"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aEy-47-w5R" firstAttribute="top" secondItem="OCy-uE-Xrt" secondAttribute="top" id="2MR-gF-emi"/>
+                    <constraint firstItem="d6c-f1-FOO" firstAttribute="leading" secondItem="aEy-47-w5R" secondAttribute="leading" id="3cG-u4-M76"/>
+                    <constraint firstItem="OCy-uE-Xrt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="8eh-ZS-4GY"/>
+                    <constraint firstItem="dWN-OH-Ljv" firstAttribute="baseline" secondItem="QSc-ny-hlo" secondAttribute="baseline" id="9vg-0P-rQm"/>
+                    <constraint firstItem="aEy-47-w5R" firstAttribute="leading" secondItem="OCy-uE-Xrt" secondAttribute="trailing" constant="8" id="B7I-bA-djg"/>
+                    <constraint firstAttribute="trailing" secondItem="cEf-zh-RpU" secondAttribute="trailing" constant="15" id="GLp-yo-M98"/>
+                    <constraint firstItem="TIm-ZR-8R7" firstAttribute="baseline" secondItem="dWN-OH-Ljv" secondAttribute="baseline" id="Iyn-81-4e5"/>
+                    <constraint firstAttribute="trailing" secondItem="d6c-f1-FOO" secondAttribute="trailing" constant="15" id="L8H-Hf-m21"/>
+                    <constraint firstItem="QSc-ny-hlo" firstAttribute="top" secondItem="d6c-f1-FOO" secondAttribute="bottom" constant="8" id="Lwl-59-5WH"/>
+                    <constraint firstItem="dWN-OH-Ljv" firstAttribute="leading" secondItem="QSc-ny-hlo" secondAttribute="trailing" id="T0A-RL-1z4"/>
+                    <constraint firstItem="YIH-lD-5Kx" firstAttribute="trailing" secondItem="cEf-zh-RpU" secondAttribute="trailing" id="beG-UZ-qc1"/>
+                    <constraint firstItem="QSc-ny-hlo" firstAttribute="leading" secondItem="aEy-47-w5R" secondAttribute="leading" id="cBm-yU-d0L"/>
+                    <constraint firstItem="YIH-lD-5Kx" firstAttribute="leading" secondItem="TIm-ZR-8R7" secondAttribute="trailing" constant="15" id="hFj-Kj-4sU"/>
+                    <constraint firstItem="OCy-uE-Xrt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="i3F-B8-egp"/>
+                    <constraint firstItem="d6c-f1-FOO" firstAttribute="top" secondItem="aEy-47-w5R" secondAttribute="bottom" constant="8" id="jta-g0-3Ct"/>
+                    <constraint firstItem="cEf-zh-RpU" firstAttribute="top" secondItem="aEy-47-w5R" secondAttribute="top" id="vGu-ZX-rlo"/>
+                    <constraint firstItem="YIH-lD-5Kx" firstAttribute="centerY" secondItem="TIm-ZR-8R7" secondAttribute="centerY" id="yh4-yV-Fu6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="avatarBtn" destination="OCy-uE-Xrt" id="OAt-cH-SYO"/>
+                <outlet property="commondBtn" destination="YIH-lD-5Kx" id="den-SJ-0cn"/>
+                <outlet property="contentLabel" destination="d6c-f1-FOO" id="aeM-Ga-eiP"/>
+                <outlet property="floorLabel" destination="cEf-zh-RpU" id="svg-YG-vRx"/>
+                <outlet property="likeBtn" destination="TIm-ZR-8R7" id="GgZ-cW-wSV"/>
+                <outlet property="nickNameBtn" destination="aEy-47-w5R" id="mQ0-ll-Dku"/>
+                <outlet property="reportBtn" destination="dWN-OH-Ljv" id="7QV-G6-orS"/>
+                <outlet property="timeLabel" destination="QSc-ny-hlo" id="DQJ-bc-Axl"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="真赞" width="18" height="18"/>
+        <image name="评论" width="18" height="18"/>
+    </resources>
+</document>

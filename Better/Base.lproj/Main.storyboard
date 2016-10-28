@@ -1,26 +1,444 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xEI-Mw-mXX">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Hyn Channel View Controller-->
+        <scene sceneID="x7b-PT-Epg">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HynChannelViewController" id="Szg-OR-s4t" customClass="HynChannelViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="F9L-05-kQS"/>
+                        <viewControllerLayoutGuide type="bottom" id="t5l-Yf-LRE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="rv0-Ng-Yqr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3fr-tb-6pf"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCF-3E-mNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1569" y="-927"/>
+        </scene>
+        <!--Hyn Newest View Controller-->
+        <scene sceneID="T4E-VQ-bqB">
+            <objects>
+                <tableViewController storyboardIdentifier="HynNewestViewController" id="iLc-Cf-LBE" customClass="HynNewestViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="M78-sm-rAX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="iLc-Cf-LBE" id="Weg-lA-Owf"/>
+                            <outlet property="delegate" destination="iLc-Cf-LBE" id="Vnr-Vd-rON"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZx-Vp-god" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2838" y="-1442"/>
+        </scene>
+        <!--Hyn Topic View Controller-->
+        <scene sceneID="jdI-My-0tk">
+            <objects>
+                <tableViewController storyboardIdentifier="HynTopicViewController" id="JTW-hf-ps2" customClass="HynTopicViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YCm-oH-EdB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="JTW-hf-ps2" id="ssO-zi-clJ"/>
+                            <outlet property="delegate" destination="JTW-hf-ps2" id="DRQ-j8-SsV"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6BQ-O3-5mP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3473" y="-2102"/>
+        </scene>
+        <!--Hyn Found View Controller-->
+        <scene sceneID="9KF-5t-ejb">
+            <objects>
+                <viewController storyboardIdentifier="HynFoundViewController" id="Kca-Mv-BZA" customClass="HynFoundViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="55S-N9-Jgk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vyo-nO-mn8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ryA-8B-b6B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MtF-Dk-hXV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKq-VZ-pVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1830" y="-529"/>
+        </scene>
+        <!--Hyn Home View Controller-->
+        <scene sceneID="6RX-Ba-l5x">
+            <objects>
+                <viewController id="4Y5-fF-oah" customClass="HynHomeViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y81-hZ-IQz"/>
+                        <viewControllerLayoutGuide type="bottom" id="LeE-P4-f0m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qV6-Cy-Xsd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0C-Bp-3sP">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="Bvh-67-tlg" kind="embed" id="tXG-yd-G6p"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LeE-P4-f0m" firstAttribute="top" secondItem="t0C-Bp-3sP" secondAttribute="bottom" id="JGg-Bb-RqG"/>
+                            <constraint firstItem="t0C-Bp-3sP" firstAttribute="leading" secondItem="qV6-Cy-Xsd" secondAttribute="leading" id="Kmz-We-e9S"/>
+                            <constraint firstAttribute="trailing" secondItem="t0C-Bp-3sP" secondAttribute="trailing" id="YlG-zZ-xRe"/>
+                            <constraint firstItem="t0C-Bp-3sP" firstAttribute="top" secondItem="Y81-hZ-IQz" secondAttribute="bottom" id="fbo-Vw-1qz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IrF-OC-Ear">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="xgd-gy-x8r">
+                            <rect key="frame" x="112.5" y="7" width="150" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="热门"/>
+                                <segment title="最新"/>
+                            </segments>
+                            <color key="tintColor" red="0.99607843139999996" green="0.76470588240000004" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segMentedControl" destination="xgd-gy-x8r" id="b2w-4Q-nHa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Md-6q-BwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1634" y="-2248"/>
+        </scene>
+        <!--Hyn Re Commond View Controller-->
+        <scene sceneID="F7J-mO-O1H">
+            <objects>
+                <tableViewController storyboardIdentifier="HynReCommondViewController" id="iTW-mB-TQH" customClass="HynReCommondViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hjd-hq-PXl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="iTW-mB-TQH" id="oXh-I2-naT"/>
+                            <outlet property="delegate" destination="iTW-mB-TQH" id="ETc-cg-knj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="sKl-j4-MiM"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gg-rk-U8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2050" y="-2281"/>
+        </scene>
+        <!--Hyn Web View Controller-->
+        <scene sceneID="oCq-pF-zEZ">
+            <objects>
+                <viewController storyboardIdentifier="HynWebViewController" id="ebF-SL-TVy" customClass="HynWebViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fih-3f-fJi"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZvZ-uO-ivb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qmk-cm-M79">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2oK-8y-D5Q">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ebF-SL-TVy" id="M9G-Hl-vL6"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZvZ-uO-ivb" firstAttribute="top" secondItem="2oK-8y-D5Q" secondAttribute="bottom" id="Kta-YN-w9Y"/>
+                            <constraint firstItem="2oK-8y-D5Q" firstAttribute="leading" secondItem="Qmk-cm-M79" secondAttribute="leading" id="PC3-fK-Bog"/>
+                            <constraint firstAttribute="trailing" secondItem="2oK-8y-D5Q" secondAttribute="trailing" id="Spi-aQ-FYH"/>
+                            <constraint firstItem="2oK-8y-D5Q" firstAttribute="top" secondItem="Fih-3f-fJi" secondAttribute="bottom" constant="-64" id="ijl-aM-xnb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="2oK-8y-D5Q" id="8HM-NJ-pJE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uRh-qL-YCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2599" y="-2280"/>
+        </scene>
+        <!--Animated Tab Bar Controller-->
+        <scene sceneID="pS5-ec-Ov0">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="xEI-Mw-mXX" customClass="RAMAnimatedTabBarController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5uc-5O-O75">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="zSo-cq-jgD" kind="relationship" relationship="viewControllers" id="iEH-WT-CVg"/>
+                        <segue destination="DIw-94-NxD" kind="relationship" relationship="viewControllers" id="eVK-Ib-3gf"/>
+                        <segue destination="BB1-pi-77P" kind="relationship" relationship="viewControllers" id="BNu-JF-quq"/>
+                        <segue destination="JUW-8C-pUc" kind="relationship" relationship="viewControllers" id="ig6-rV-nbL"/>
+                        <segue destination="rCy-zV-U4d" kind="relationship" relationship="viewControllers" id="PVj-tV-kn4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efV-Le-aoG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-719" y="-510"/>
+        </scene>
+        <!--better-->
+        <scene sceneID="V7l-fh-hI1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zSo-cq-jgD" customClass="HynNavController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="better" image="bettertab" selectedImage="bettertabselect" id="wXY-dX-rNu" customClass="RAMAnimatedTabBarItem" customModule="Better" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="APM-iw-Mbl" id="teP-Wz-LUt"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nqr-MV-I1W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Y5-fF-oah" kind="relationship" relationship="rootViewController" id="nAG-83-umC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6vM-EO-qER" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="APM-iw-Mbl" customClass="RAMBounceAnimation" customModule="Better" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.99607843139999996" green="0.76470588240000004" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="0.80000000000000004"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" red="0.99607843139999996" green="0.76470588240000004" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="777" y="-2301"/>
+        </scene>
+        <!--频道-->
+        <scene sceneID="JK2-hf-nbh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DIw-94-NxD" customClass="HynNavController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="频道" image="tabBar_0" selectedImage="tabBar_0_on" id="B2A-zD-zgc" customClass="RAMAnimatedTabBarItem" customModule="Better" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="KzW-Sb-7kZ" id="KNd-QN-w6t"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NrB-jB-F1c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Szg-OR-s4t" kind="relationship" relationship="rootViewController" id="Ff1-8v-Km2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYr-pJ-1L6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="KzW-Sb-7kZ" customClass="RAMBounceAnimation" customModule="Better" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.99607843139999996" green="0.76470588240000004" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" red="0.99607843139999996" green="0.76470588240000004" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="0.80000000000000004"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="777" y="-1360"/>
+        </scene>
+        <!--发现-->
+        <scene sceneID="gVx-Ka-bzF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BB1-pi-77P" customClass="HynNavController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="发现" image="findtab" selectedImage="findtabselect" id="bWT-Na-2Gh" customClass="RAMAnimatedTabBarItem" customModule="Better" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="2C6-UI-eSG" id="npI-Jk-oWF"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Ki-5H-tXz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kca-Mv-BZA" kind="relationship" relationship="rootViewController" id="qOf-PV-V79"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJq-gM-7jT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="2C6-UI-eSG" customClass="RAMBounceAnimation" customModule="Better" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="0.80000000000000004"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.99607843137254903" green="0.76470588235294112" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" red="0.99607843139999996" green="0.76470588240000004" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="777" y="-529"/>
+        </scene>
+        <!--Hyn Message View Controller-->
+        <scene sceneID="Xe0-gb-Ppj">
+            <objects>
+                <viewController storyboardIdentifier="HynMessageViewController" id="9lZ-fr-fiZ" customClass="HynMessageViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ip-pV-99G"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tj7-ls-Yfh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G2r-ha-vHJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xUu-06-ls6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDp-XG-zeb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1830" y="206"/>
+        </scene>
+        <!--消息-->
+        <scene sceneID="3sn-cD-TJc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JUW-8C-pUc" customClass="HynNavController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="消息" image="tabBar_2" selectedImage="tabBar_2_on" id="gZd-GG-Wqp" customClass="RAMAnimatedTabBarItem" customModule="Better" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="iHo-W4-kow" id="0F8-2c-xUP"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4i2-u1-4Gk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9lZ-fr-fiZ" kind="relationship" relationship="rootViewController" id="rop-AC-3rk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mV-JG-VaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="iHo-W4-kow" customClass="RAMBounceAnimation" customModule="Better" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="0.80000000000000004"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.99607843139999996" green="0.76470588240000004" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" red="0.99607843139999996" green="0.76470588240000004" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="777" y="207"/>
+        </scene>
+        <!--Hyn Mine View Controller-->
+        <scene sceneID="qsQ-pu-ohA">
+            <objects>
+                <viewController storyboardIdentifier="HynMineViewController" id="XK7-93-nRL" customClass="HynMineViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x72-3E-RMn"/>
+                        <viewControllerLayoutGuide type="bottom" id="8ev-un-HQc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="slU-6m-JJL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k0L-a2-yJp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FmZ-2p-5Xb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1830" y="941"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="BWE-aN-UgV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rCy-zV-U4d" customClass="HynNavController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="tabBar_3" selectedImage="tabBar_3_on" id="2fa-cd-9vB" customClass="RAMAnimatedTabBarItem" customModule="Better" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="jab-9p-de1" id="lmX-O1-KO9"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wkA-fQ-y4s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XK7-93-nRL" kind="relationship" relationship="rootViewController" id="5pj-1q-Oih"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8X-u2-su0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="jab-9p-de1" customClass="RAMBounceAnimation" customModule="Better" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="0.80000000000000004"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textSelectedColor">
+                            <color key="value" red="0.99607843139999996" green="0.76470588240000004" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconSelectedColor">
+                            <color key="value" red="0.99607843139999996" green="0.76470588240000004" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="777" y="942"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="INh-zd-cj4">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Bvh-67-tlg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qNc-OB-S5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="-1586"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bettertab" width="27" height="27"/>
+        <image name="bettertabselect" width="27" height="27"/>
+        <image name="findtab" width="27" height="27"/>
+        <image name="findtabselect" width="27" height="27"/>
+        <image name="tabBar_0" width="27" height="27"/>
+        <image name="tabBar_0_on" width="27" height="27"/>
+        <image name="tabBar_2" width="27" height="27"/>
+        <image name="tabBar_2_on" width="27" height="27"/>
+        <image name="tabBar_3" width="27" height="27"/>
+        <image name="tabBar_3_on" width="27" height="27"/>
+    </resources>
 </document>

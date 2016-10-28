@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HynLikeNumCollectionCell" id="gTV-IL-0wX" customClass="HynLikeNumCollectionCell" customModule="Better" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ul3-4d-JeX">
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Ul3-4d-JeX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FMl-fy-6s8"/>
+                <constraint firstAttribute="bottom" secondItem="Ul3-4d-JeX" secondAttribute="bottom" id="chc-Eb-rHO"/>
+                <constraint firstItem="Ul3-4d-JeX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="f7p-6l-Mqf"/>
+                <constraint firstAttribute="trailing" secondItem="Ul3-4d-JeX" secondAttribute="trailing" id="zIF-GX-BG7"/>
+            </constraints>
+            <connections>
+                <outlet property="likeNumLabel" destination="Ul3-4d-JeX" id="rUQ-bw-QQ1"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

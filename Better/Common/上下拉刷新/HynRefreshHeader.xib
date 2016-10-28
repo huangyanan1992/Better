@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HynRefreshHeader" customModule="Better" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下拉刷新" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvo-0n-5sm">
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最后更新：今天11:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDo-rp-WrE">
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7OQ-qH-f7u"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refresh_down" translatesAutoresizingMaskIntoConstraints="NO" id="DnK-x5-Uzo"/>
+            </subviews>
+            <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Uvo-0n-5sm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6KY-fu-ELG"/>
+                <constraint firstItem="Uvo-0n-5sm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="8kY-qD-JiX"/>
+                <constraint firstItem="DnK-x5-Uzo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-102" id="Gqe-8L-11G"/>
+                <constraint firstItem="FDo-rp-WrE" firstAttribute="top" secondItem="Uvo-0n-5sm" secondAttribute="bottom" constant="3" id="Hx6-l6-Ee0"/>
+                <constraint firstItem="DnK-x5-Uzo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="SVe-7b-Zjq"/>
+                <constraint firstItem="FDo-rp-WrE" firstAttribute="centerX" secondItem="Uvo-0n-5sm" secondAttribute="centerX" id="nyF-9F-5BA"/>
+                <constraint firstItem="7OQ-qH-f7u" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="sai-TV-8UT"/>
+                <constraint firstItem="7OQ-qH-f7u" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-102" id="yfv-uf-XJI"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerActivityIndicator" destination="7OQ-qH-f7u" id="ikv-zD-5gK"/>
+                <outlet property="headerContentLabel" destination="Uvo-0n-5sm" id="4to-JY-BDR"/>
+                <outlet property="lastRefreshTimeLabel" destination="FDo-rp-WrE" id="Xfy-b0-49N"/>
+                <outlet property="refreshDownImageView" destination="DnK-x5-Uzo" id="8vJ-lf-duJ"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="81"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="refresh_down" width="18" height="31"/>
+    </resources>
+</document>
