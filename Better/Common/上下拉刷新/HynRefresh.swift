@@ -56,16 +56,15 @@ extension UIScrollView {
     
     
     /// 添加下拉刷新
-    func addRefreshHeader(headerRefresh:@escaping HynHeaderClosure) {
+    func hyn_addRefreshHeader(headerRefresh:@escaping HynHeaderClosure) {
         
-        let vc = self.viewController() as! UITableViewController
         obserVerIsRemove = false
         weak var weakSelf = self
         guard (weakSelf != nil) else {
             return
         }
         currentClassAddress = address(o: weakSelf!)
-        addObserver(vc.tableView, forKeyPath: contentOffsetKeyPath, options: NSKeyValueObservingOptions.new, context: nil)
+        addObserver(self, forKeyPath: contentOffsetKeyPath, options: NSKeyValueObservingOptions.new, context: nil)
         header = HynRefreshHeader.initWithNib() as! HynRefreshHeader
         guard (header != nil) else {
             print("header 加载失败")
@@ -92,11 +91,11 @@ extension UIScrollView {
         if currentClassAddress ==  address(o: selfAddress){
             if obserVerIsRemove == false {
                 obserVerIsRemove = true
-                removeObserver((self.viewController() as! UITableViewController).tableView, forKeyPath: contentOffsetKeyPath, context: nil)
+                removeObserver(self, forKeyPath: contentOffsetKeyPath, context: nil)
             }
             else {
                 obserVerIsRemove = false
-                addObserver((self.viewController() as! UITableViewController).tableView, forKeyPath: contentOffsetKeyPath, options: NSKeyValueObservingOptions.new, context: nil)
+                addObserver(self, forKeyPath: contentOffsetKeyPath, options: NSKeyValueObservingOptions.new, context: nil)
             }
         }
     }
@@ -209,7 +208,7 @@ extension UIScrollView {
     }
     
     /// 数据加载完毕状态
-    func hyn_refreshDataLoadOver() {
+    func hyn_footerDataLoadOver() {
         weak var weakSelf = self
         guard footer != nil else{
             return

@@ -25,15 +25,21 @@
 		9A1D54241DB5D32A00AFB56F /* HynReCommondArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D54221DB5D32A00AFB56F /* HynReCommondArticleCell.swift */; };
 		9A1D54251DB5D32A00AFB56F /* HynReCommondArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1D54231DB5D32A00AFB56F /* HynReCommondArticleCell.xib */; };
 		9A1D54271DB5EE7D00AFB56F /* HynFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D54261DB5EE7D00AFB56F /* HynFunc.swift */; };
+		9A2D8B5B1DC86706003A1C35 /* HynEmotionScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D8B5A1DC86706003A1C35 /* HynEmotionScrollView.swift */; };
 		9A34326D1DB9FE59009BD131 /* HynDateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34326C1DB9FE59009BD131 /* HynDateUtils.swift */; };
 		9A5500041DC2F887006C7409 /* HynNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5500031DC2F887006C7409 /* HynNavController.swift */; };
 		9AA10AE01DC0BCE900E89729 /* HynLikeMemberCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA10ADE1DC0BCE900E89729 /* HynLikeMemberCollectionCell.swift */; };
 		9AA10AE11DC0BCE900E89729 /* HynLikeMemberCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AA10ADF1DC0BCE900E89729 /* HynLikeMemberCollectionCell.xib */; };
+		9AAA7E301DC9B4CA00FC8BB4 /* HynEmotionBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA7E2F1DC9B4CA00FC8BB4 /* HynEmotionBottomView.swift */; };
+		9AAA7E321DC9B4D900FC8BB4 /* HynEmotionBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AAA7E311DC9B4D900FC8BB4 /* HynEmotionBottomView.xib */; };
 		9AB189F41DB75BB600AB1003 /* HynEmotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB189F31DB75BB600AB1003 /* HynEmotionManager.swift */; };
 		9AB189F61DB76C6900AB1003 /* HynWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB189F51DB76C6900AB1003 /* HynWebViewController.swift */; };
 		9AB189F81DB77EE200AB1003 /* HynNewestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB189F71DB77EE200AB1003 /* HynNewestViewController.swift */; };
 		9AB189FA1DB77F7B00AB1003 /* HynHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB189F91DB77F7B00AB1003 /* HynHomeViewController.swift */; };
+		9AB1B3621DC88FE000111740 /* HynEmotionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1B3611DC88FE000111740 /* HynEmotionTextView.swift */; };
+		9AB1B3641DC88FF400111740 /* HynEmotionTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB1B3631DC88FF400111740 /* HynEmotionTextView.xib */; };
 		9AB46F421DB49F730000745E /* HynExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB46F411DB49F730000745E /* HynExtension.swift */; };
+		9AC45DFB1DC35B4300B52A16 /* HynEmotionKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB828981DC344700031677D /* HynEmotionKeyBoard.swift */; };
 		9AD4F4211DB757C300A4487B /* 拜拜.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AD4F3CC1DB757C300A4487B /* 拜拜.png */; };
 		9AD4F4221DB757C300A4487B /* 暴怒.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AD4F3CD1DB757C300A4487B /* 暴怒.png */; };
 		9AD4F4231DB757C300A4487B /* 杯具.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AD4F3CE1DB757C300A4487B /* 杯具.png */; };
@@ -130,6 +136,8 @@
 		9ADF99CA1DB0B0A900C8D4AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ADF99C81DB0B0A900C8D4AC /* LaunchScreen.storyboard */; };
 		9ADF9A6A1DB0B5E500C8D4AC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADF9A5D1DB0B5E500C8D4AC /* SwiftyJSON.swift */; };
 		9ADF9A961DB0B68E00C8D4AC /* HynRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADF9A951DB0B68E00C8D4AC /* HynRequestManager.swift */; };
+		9AE30B1A1DCB0874009BBAA5 /* YYText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE30B191DCB0874009BBAA5 /* YYText.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		9AE30B1C1DCB2043009BBAA5 /* HynConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE30B1B1DCB2043009BBAA5 /* HynConst.swift */; };
 		9AEEFFB11DB4BC0000166C35 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEFFA61DB4BC0000166C35 /* Converter.swift */; };
 		9AEEFFB21DB4BC0000166C35 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEFFA71DB4BC0000166C35 /* Extension.swift */; };
 		9AEEFFB31DB4BC0000166C35 /* HelpingMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEFFA91DB4BC0000166C35 /* HelpingMapper.swift */; };
@@ -188,15 +196,21 @@
 		9A1D54221DB5D32A00AFB56F /* HynReCommondArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynReCommondArticleCell.swift; sourceTree = "<group>"; };
 		9A1D54231DB5D32A00AFB56F /* HynReCommondArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynReCommondArticleCell.xib; sourceTree = "<group>"; };
 		9A1D54261DB5EE7D00AFB56F /* HynFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynFunc.swift; sourceTree = "<group>"; };
+		9A2D8B5A1DC86706003A1C35 /* HynEmotionScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynEmotionScrollView.swift; sourceTree = "<group>"; };
 		9A34326C1DB9FE59009BD131 /* HynDateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynDateUtils.swift; sourceTree = "<group>"; };
 		9A5500031DC2F887006C7409 /* HynNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynNavController.swift; sourceTree = "<group>"; };
 		9AA10ADE1DC0BCE900E89729 /* HynLikeMemberCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynLikeMemberCollectionCell.swift; sourceTree = "<group>"; };
 		9AA10ADF1DC0BCE900E89729 /* HynLikeMemberCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynLikeMemberCollectionCell.xib; sourceTree = "<group>"; };
+		9AAA7E2F1DC9B4CA00FC8BB4 /* HynEmotionBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynEmotionBottomView.swift; sourceTree = "<group>"; };
+		9AAA7E311DC9B4D900FC8BB4 /* HynEmotionBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynEmotionBottomView.xib; sourceTree = "<group>"; };
 		9AB189F31DB75BB600AB1003 /* HynEmotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynEmotionManager.swift; sourceTree = "<group>"; };
 		9AB189F51DB76C6900AB1003 /* HynWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynWebViewController.swift; sourceTree = "<group>"; };
 		9AB189F71DB77EE200AB1003 /* HynNewestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynNewestViewController.swift; sourceTree = "<group>"; };
 		9AB189F91DB77F7B00AB1003 /* HynHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynHomeViewController.swift; sourceTree = "<group>"; };
+		9AB1B3611DC88FE000111740 /* HynEmotionTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynEmotionTextView.swift; sourceTree = "<group>"; };
+		9AB1B3631DC88FF400111740 /* HynEmotionTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynEmotionTextView.xib; sourceTree = "<group>"; };
 		9AB46F411DB49F730000745E /* HynExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynExtension.swift; sourceTree = "<group>"; };
+		9AB828981DC344700031677D /* HynEmotionKeyBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynEmotionKeyBoard.swift; sourceTree = "<group>"; };
 		9AD4F3CC1DB757C300A4487B /* 拜拜.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "拜拜.png"; sourceTree = "<group>"; };
 		9AD4F3CD1DB757C300A4487B /* 暴怒.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "暴怒.png"; sourceTree = "<group>"; };
 		9AD4F3CE1DB757C300A4487B /* 杯具.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "杯具.png"; sourceTree = "<group>"; };
@@ -296,6 +310,8 @@
 		9ADF9A5C1DB0B5E500C8D4AC /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 		9ADF9A5D1DB0B5E500C8D4AC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9ADF9A951DB0B68E00C8D4AC /* HynRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynRequestManager.swift; sourceTree = "<group>"; };
+		9AE30B191DCB0874009BBAA5 /* YYText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYText.framework; path = "../../../Library/Developer/Xcode/DerivedData/Better-ejqjpeshlrvcbxfngswvwhimzzbh/Build/Products/Debug-iphonesimulator/YYText/YYText.framework"; sourceTree = "<group>"; };
+		9AE30B1B1DCB2043009BBAA5 /* HynConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynConst.swift; sourceTree = "<group>"; };
 		9AEEFFA61DB4BC0000166C35 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		9AEEFFA71DB4BC0000166C35 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		9AEEFFA81DB4BC0000166C35 /* HandyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandyJSON.h; sourceTree = "<group>"; };
@@ -343,6 +359,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AE30B1A1DCB0874009BBAA5 /* YYText.framework in Frameworks */,
 				285BE21C098B616969DAD0F1 /* Pods_Better.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +370,7 @@
 		10F4A1B71E5EA67CB1CA72F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9AE30B191DCB0874009BBAA5 /* YYText.framework */,
 				C96F36AF6D3CCF05748B037D /* Pods_Better.framework */,
 			);
 			name = Frameworks;
@@ -432,6 +450,7 @@
 				9AB46F411DB49F730000745E /* HynExtension.swift */,
 				9A1D54201DB5CCDC00AFB56F /* HynBetterUrls.swift */,
 				9A1D54261DB5EE7D00AFB56F /* HynFunc.swift */,
+				9AE30B1B1DCB2043009BBAA5 /* HynConst.swift */,
 				9AB189F51DB76C6900AB1003 /* HynWebViewController.swift */,
 				9AF03E0B1DC062F8009DC21C /* HynButton.swift */,
 				9A5500031DC2F887006C7409 /* HynNavController.swift */,
@@ -539,6 +558,12 @@
 			isa = PBXGroup;
 			children = (
 				9AB189F31DB75BB600AB1003 /* HynEmotionManager.swift */,
+				9AB828981DC344700031677D /* HynEmotionKeyBoard.swift */,
+				9A2D8B5A1DC86706003A1C35 /* HynEmotionScrollView.swift */,
+				9AAA7E2F1DC9B4CA00FC8BB4 /* HynEmotionBottomView.swift */,
+				9AAA7E311DC9B4D900FC8BB4 /* HynEmotionBottomView.xib */,
+				9AB1B3611DC88FE000111740 /* HynEmotionTextView.swift */,
+				9AB1B3631DC88FF400111740 /* HynEmotionTextView.xib */,
 			);
 			path = "表情管理";
 			sourceTree = "<group>";
@@ -877,6 +902,7 @@
 				9AD4F4541DB757C300A4487B /* 丧气.png in Resources */,
 				9AD4F4511DB757C300A4487B /* 亲亲.png in Resources */,
 				9AD4F4441DB757C300A4487B /* 抠鼻.png in Resources */,
+				9AB1B3641DC88FF400111740 /* HynEmotionTextView.xib in Resources */,
 				9AF03E141DC0885E009DC21C /* HynCommonCell.xib in Resources */,
 				9AD4F4251DB757C300A4487B /* 闭嘴.png in Resources */,
 				9AD4F4421DB757C300A4487B /* 可爱.png in Resources */,
@@ -907,6 +933,7 @@
 				9ADF99C71DB0B0A900C8D4AC /* Assets.xcassets in Resources */,
 				9AD4F4431DB757C300A4487B /* 可怜.png in Resources */,
 				9AD4F4401DB757C300A4487B /* 惊吓.png in Resources */,
+				9AAA7E321DC9B4D900FC8BB4 /* HynEmotionBottomView.xib in Resources */,
 				9AD4F4221DB757C300A4487B /* 暴怒.png in Resources */,
 				9AD4F45D1DB757C300A4487B /* 头晕.png in Resources */,
 				9AD4F4301DB757C300A4487B /* 愤怒.png in Resources */,
@@ -1003,12 +1030,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC45DFB1DC35B4300B52A16 /* HynEmotionKeyBoard.swift in Sources */,
 				9AFCE0BC1DB0EAEB00C97633 /* RAMFrameItemAnimation.swift in Sources */,
 				9AFCE0C01DB0EAEB00C97633 /* RAMAnimatedTabBarController.swift in Sources */,
+				9A2D8B5B1DC86706003A1C35 /* HynEmotionScrollView.swift in Sources */,
+				9AE30B1C1DCB2043009BBAA5 /* HynConst.swift in Sources */,
 				9AB46F421DB49F730000745E /* HynExtension.swift in Sources */,
 				9A1D54191DB5BC7A00AFB56F /* HynHotBannerCell.swift in Sources */,
 				9AFCE0BF1DB0EAEB00C97633 /* RAMTransitionItemAnimations.swift in Sources */,
 				9AFCE0671DB0CF2700C97633 /* HynFoundViewController.swift in Sources */,
+				9AB1B3621DC88FE000111740 /* HynEmotionTextView.swift in Sources */,
 				9AFCE0691DB0CF3F00C97633 /* HynChannelViewController.swift in Sources */,
 				9A191BE41DC1D39A00AA88F3 /* HynLikeNumCollectionCell.swift in Sources */,
 				9AEEFFBA1DB4BC0000166C35 /* Property.swift in Sources */,
@@ -1031,6 +1062,7 @@
 				9AEEFFB31DB4BC0000166C35 /* HelpingMapper.swift in Sources */,
 				9AF03DFE1DC04E30009DC21C /* HynCommondModel.swift in Sources */,
 				9AEEFFB91DB4BC0000166C35 /* JSONSerializer.swift in Sources */,
+				9AAA7E301DC9B4CA00FC8BB4 /* HynEmotionBottomView.swift in Sources */,
 				9A1D54271DB5EE7D00AFB56F /* HynFunc.swift in Sources */,
 				9AF03DFC1DC04BD2009DC21C /* HynUserModel.swift in Sources */,
 				9AEEFFBD1DB4BC6000166C35 /* HynHotModel.swift in Sources */,
@@ -1130,6 +1162,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
 			};
@@ -1173,6 +1206,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
@@ -1185,6 +1219,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7SL7B4MD27;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1195,6 +1230,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyn.Better;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1205,6 +1242,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7SL7B4MD27;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1215,6 +1253,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyn.Better;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

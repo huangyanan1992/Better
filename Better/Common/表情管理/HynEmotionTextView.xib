@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HynEmotionTextView" customModule="Better" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpH-bb-WjU">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="fCi-XX-4H0"/>
+                        <constraint firstAttribute="height" constant="30" id="sB8-Pf-2v5"/>
+                    </constraints>
+                    <state key="normal" image="可发布照片"/>
+                    <connections>
+                        <action selector="photosAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="F9w-Pt-fr2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEN-aO-Gx2">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="O1e-7X-JG3"/>
+                        <constraint firstAttribute="height" constant="30" id="c04-XZ-dYP"/>
+                    </constraints>
+                    <state key="normal" image="可发布表情"/>
+                    <connections>
+                        <action selector="emotionAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Wfh-Jg-piV"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSz-Yg-Aac" customClass="YYTextView">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="回复题主"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="insetTop_">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="fontSize_">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="insetLeft_">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qSz-Yg-Aac" secondAttribute="bottom" constant="7" id="0i4-Fr-Ly4"/>
+                <constraint firstItem="mEN-aO-Gx2" firstAttribute="leading" secondItem="UpH-bb-WjU" secondAttribute="trailing" constant="5" id="1Cn-MA-obr"/>
+                <constraint firstItem="UpH-bb-WjU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3bl-Ja-A2U"/>
+                <constraint firstItem="qSz-Yg-Aac" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="55y-SL-G1s"/>
+                <constraint firstItem="qSz-Yg-Aac" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="5l8-4E-axd"/>
+                <constraint firstItem="UpH-bb-WjU" firstAttribute="leading" secondItem="qSz-Yg-Aac" secondAttribute="trailing" constant="15" id="H0f-Os-KLH"/>
+                <constraint firstAttribute="trailing" secondItem="mEN-aO-Gx2" secondAttribute="trailing" constant="5" id="qy4-vC-zFm"/>
+                <constraint firstItem="mEN-aO-Gx2" firstAttribute="centerY" secondItem="UpH-bb-WjU" secondAttribute="centerY" id="wNd-K9-2jS"/>
+                <constraint firstItem="qSz-Yg-Aac" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="x5J-i3-M7i"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cameraBtn" destination="UpH-bb-WjU" id="vms-OI-X1f"/>
+                <outlet property="emotionBtn" destination="mEN-aO-Gx2" id="E2G-Qm-iUG"/>
+                <outlet property="yy_textView" destination="qSz-Yg-Aac" id="3Sa-yg-G6A"/>
+            </connections>
+            <point key="canvasLocation" x="45.5" y="70"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="可发布照片" width="50" height="50"/>
+        <image name="可发布表情" width="50" height="50"/>
+    </resources>
+</document>

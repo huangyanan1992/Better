@@ -35,7 +35,7 @@ class HynCommonCell: UITableViewCell {
             }
             
             
-            timeLabel.text = commondModel?.create_time
+            timeLabel.text = Date.dateByString(string: (commondModel?.create_time)!).timesAgo()
         }
     }
     

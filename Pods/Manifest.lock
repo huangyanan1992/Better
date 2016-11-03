@@ -3,12 +3,14 @@ PODS:
   - DGElasticPullToRefresh (1.1)
   - Kingfisher (3.1.3)
   - Spring (1.0.3)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
   - Alamofire
   - DGElasticPullToRefresh
   - Kingfisher (~> 3.1.3)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
+  - YYText
 
 EXTERNAL SOURCES:
   Spring:
@@ -25,7 +27,8 @@ SPEC CHECKSUMS:
   DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
   Kingfisher: 007f5851c18c81e7cc106c9cbac1bafea1cce5dc
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 70d608fc80ce0236d2f6adac834f66ea53e07d45
+PODFILE CHECKSUM: 5c631f4f0e5f2e59bf71443decd8155c0dcf4f9d
 
 COCOAPODS: 1.0.1

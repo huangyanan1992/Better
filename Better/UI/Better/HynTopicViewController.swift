@@ -8,7 +8,14 @@
 
 import UIKit
 
-class HynTopicViewController: UITableViewController {
+class HynTopicViewController: UIViewController {
+    
+    var emotionKeyBoard:HynEmotionKeyBoard?
+    
+    var tableView:UITableView = UITableView.init()
+    
+    var pageSize:Int = 15
+    
     
     var articleId:Int? {
         didSet {
@@ -20,61 +27,126 @@ class HynTopicViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpBackBtn()
-        registerCell()
+        setUpSubViews()
     }
     
-    
-
-}
-
-typealias TopicInit = HynTopicViewController
-extension TopicInit {
-    static func topicVC() -> HynTopicViewController {
-        return UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: HynTopicViewController.className()) as! HynTopicViewController
+    deinit {
+        print(HynTopicViewController.self)
     }
 }
 
-typealias TopicLoadData = HynTopicViewController
-extension TopicLoadData {
+typealias TopicRefresh = HynTopicViewController
+extension TopicRefresh {
     
-    func loadData() {
-        HynTopicModel.getArticleById(articleId: articleId!) { (topicModel, error) in
-            
-            guard (topicModel != nil) else {
-                return
-            }
-            self.topicModel = topicModel
-            self.tableView.reloadData()
-            
+    func addRefresh() {
+        tableView.hyn_addRefreshHeader { [weak self] in
+            self?.loadArticle()
         }
         
-        HynCommondModel.getCommond(articleId: articleId!) { (commondArray, error) in
-            guard (commondArray != nil) else {
-                return
-            }
-            self.commondArray = commondArray
-            self.tableView.reloadData()
+        tableView.hyn_addRefreshFooter { [weak self] in
+            
+            self?.pageSize = (self?.pageSize)! + 15
+            self?.loadCommond()
         }
     }
     
 }
 
-typealias TopicRegisterCell = HynTopicViewController
-extension TopicRegisterCell {
+typealias TopicSubViews = HynTopicViewController
+extension TopicSubViews {
     
-    func registerCell() {
+    fileprivate func setUpSubViews() {
+        
+        setUpBackBtn()
+        setUpTableView()
+        registerCell()
+        bottomView()
+        addRefresh()
+        
+    }
+    
+    private func bottomView() {
+        
+        emotionKeyBoard = HynEmotionKeyBoard.init(frame: CGRect(x: 0, y: .screenHeight()-emotionTextFieldHeight-64, width: .screenWidth(), height: itemHeight*3+emotionKeyBoardBottomHeight+emotionTextFieldHeight))
+        view.addSubview(emotionKeyBoard!)
+    }
+    
+    private func setUpTableView() {
+        tableView.frame = CGRect.init(x: 0, y: 0, width: .screenWidth(), height: .screenHeight()-64-44)
+        tableView.backgroundColor = HynThemeManager.shared.backgroundColor
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(keyBoardHiden))
+        tap.numberOfTapsRequired = 1
+        tableView.addGestureRecognizer(tap)
+        view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    
+    private func registerCell() {
+        
         tableView.register(UINib.init(nibName: HynArticleCell.className(), bundle: nil), forCellReuseIdentifier: HynArticleCell.className())
         tableView.register(UINib.init(nibName: HynImageCell.className(), bundle: nil), forCellReuseIdentifier: HynImageCell.className())
         tableView.register(UINib.init(nibName: HynLikeMembersCell.className(), bundle: nil), forCellReuseIdentifier: HynLikeMembersCell.className())
         tableView.register(UINib.init(nibName: HynCommonCell.className(), bundle: nil), forCellReuseIdentifier: HynCommonCell.className())
     }
     
+    
+}
+
+typealias TopicInit = HynTopicViewController
+extension TopicInit {
+    
+    static func topicVC() -> HynTopicViewController {
+        
+        return UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: HynTopicViewController.className()) as! HynTopicViewController
+        
+    }
+    
+}
+
+typealias TopicLoadData = HynTopicViewController
+extension TopicLoadData {
+    
+    func loadData() {
+        loadArticle()
+        loadCommond()
+    }
+    
+    func loadArticle() {
+        HynTopicModel.getArticleById(articleId: articleId!) { [weak self] (topicModel, error) in
+            
+            guard (topicModel != nil) else {
+                return
+            }
+            self?.topicModel = topicModel
+            self?.tableView.reloadData()
+            self?.tableView.hyn_headerEndRefreshing()
+            
+        }
+    }
+    
+    func loadCommond() {
+        HynCommondModel.getCommond(articleId: articleId!, pageSize: pageSize) { [weak self] (commondArray, error) in
+            guard (commondArray != nil) else {
+                return
+            }
+            guard self?.commondArray?.count != commondArray?.count else {
+                self?.tableView.hyn_footerDataLoadOver()
+                return
+            }
+            self?.commondArray = commondArray
+            self?.tableView.reloadData()
+            self?.tableView.hyn_footerEndRefreshing()
+        }
+    }
+    
 }
 
 typealias TopicDelegate = HynTopicViewController
-extension TopicDelegate {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension TopicDelegate:UITableViewDelegate,UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             guard (topicModel?.article?.picsModel != nil) else {
                 return 0
@@ -89,18 +161,23 @@ extension TopicDelegate {
         }
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if indexPath.section == 0 {
+            
             if indexPath.row == 0 {
+                
                 let cell:HynArticleCell = tableView.dequeueReusableCell(withIdentifier: HynArticleCell.className(), for: indexPath) as! HynArticleCell
                 cell.article = topicModel?.article
                 return cell
+                
             }
             else if indexPath.row == (topicModel?.article?.picsModel?.count)! + 1 {
+                
                 let cell:HynLikeMembersCell = tableView.dequeueReusableCell(withIdentifier: HynLikeMembersCell.className(), for: indexPath) as! HynLikeMembersCell
                 cell.likes = topicModel?.likes
                 cell.article = topicModel?.article
@@ -108,6 +185,7 @@ extension TopicDelegate {
                 
             }
             else {
+                
                 let cell:HynImageCell = tableView.dequeueReusableCell(withIdentifier: HynImageCell.className(), for: indexPath) as! HynImageCell
                 cell.pic = topicModel?.article?.picsModel?[indexPath.row-1]
                 return cell
@@ -115,22 +193,28 @@ extension TopicDelegate {
             }
         }
         else {
+            
             let cell:HynCommonCell = tableView.dequeueReusableCell(withIdentifier: HynCommonCell.className(), for: indexPath) as! HynCommonCell
             cell.commondModel = commondArray?[indexPath.row]
             return cell
+            
         }
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
         if section == 1 {
+            
             let commondNumView:HynCommondNumView = HynCommondNumView.initWithNib() as! HynCommondNumView
             commondNumView.commond_num = topicModel?.article?.comment_num
             return commondNumView
+            
         }
         return nil
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
         if section == 1 {
             return 44
         }
@@ -139,12 +223,13 @@ extension TopicDelegate {
         }
     }
     
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
+            
             if indexPath.row == 0 {
                 return 83 + (topicModel?.article?.contentHeight)!+10
             }
@@ -160,7 +245,15 @@ extension TopicDelegate {
         }
     }
     
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        emotionKeyBoard?.keyBoardAllHide()
+    }
     
 }
 
+extension HynTopicViewController {
+    func keyBoardHiden() {
+        emotionKeyBoard?.keyBoardAllHide()
+    }
+}
 

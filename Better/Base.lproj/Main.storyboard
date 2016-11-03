@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xEI-Mw-mXX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xEI-Mw-mXX">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="t5l-Yf-LRE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rv0-Ng-Yqr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -29,7 +29,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="HynNewestViewController" id="iLc-Cf-LBE" customClass="HynNewestViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="M78-sm-rAX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
@@ -42,24 +42,6 @@
             </objects>
             <point key="canvasLocation" x="2838" y="-1442"/>
         </scene>
-        <!--Hyn Topic View Controller-->
-        <scene sceneID="jdI-My-0tk">
-            <objects>
-                <tableViewController storyboardIdentifier="HynTopicViewController" id="JTW-hf-ps2" customClass="HynTopicViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YCm-oH-EdB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="JTW-hf-ps2" id="ssO-zi-clJ"/>
-                            <outlet property="delegate" destination="JTW-hf-ps2" id="DRQ-j8-SsV"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6BQ-O3-5mP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3473" y="-2102"/>
-        </scene>
         <!--Hyn Found View Controller-->
         <scene sceneID="9KF-5t-ejb">
             <objects>
@@ -69,7 +51,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Vyo-nO-mn8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ryA-8B-b6B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -88,7 +70,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LeE-P4-f0m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qV6-Cy-Xsd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0C-Bp-3sP">
@@ -131,7 +113,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="HynReCommondViewController" id="iTW-mB-TQH" customClass="HynReCommondViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hjd-hq-PXl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
@@ -154,7 +136,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ZvZ-uO-ivb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qmk-cm-M79">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2oK-8y-D5Q">
@@ -180,12 +162,33 @@
             </objects>
             <point key="canvasLocation" x="2599" y="-2280"/>
         </scene>
+        <!--Hyn Topic View Controller-->
+        <scene sceneID="Ghm-31-QA1">
+            <objects>
+                <viewController storyboardIdentifier="HynTopicViewController" extendedLayoutIncludesOpaqueBars="YES" id="7Sh-Co-bdD" customClass="HynTopicViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ScB-Qj-TpB"/>
+                        <viewControllerLayoutGuide type="bottom" id="2J3-Pn-Npe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZRS-DC-ggW">
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LCk-P1-ho1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4179" y="-1998"/>
+        </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="pS5-ec-Ov0">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="xEI-Mw-mXX" customClass="RAMAnimatedTabBarController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="xEI-Mw-mXX" customClass="RAMAnimatedTabBarController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="5uc-5O-O75">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="5uc-5O-O75">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -319,7 +322,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Tj7-ls-Yfh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="G2r-ha-vHJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -374,7 +377,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8ev-un-HQc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="slU-6m-JJL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

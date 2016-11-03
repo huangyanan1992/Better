@@ -50,10 +50,10 @@ struct HynCommondModel:HandyJSON {
     
     
     typealias result = ([HynCommondModel]?, NSError?)->Void
-    static func getCommond(articleId:Int,result:@escaping result) {
+    static func getCommond(articleId:Int,pageSize:Int,result:@escaping result) {
         
         var param:[String:AnyObject] = Dictionary()
-        param["pagesize"] = 15 as AnyObject?
+        param["pagesize"] = pageSize as AnyObject?
         param["article_id"] = articleId as AnyObject?
         param["member_id"] = login_member_id as AnyObject?
         

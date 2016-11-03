@@ -11,6 +11,8 @@ import UIKit
 
 extension UIViewController {
     
+    
+    
     /// 返回键
     func setUpBackBtn() {
         let backImage = UIImage(named: "NaviBtn_Back")!
@@ -121,6 +123,10 @@ extension UIView {
         }
         return nil
     }
+    
+    func bottom() -> CGFloat {
+        return self.frame.origin.y+self.bounds.size.height
+    }
 }
 
 extension UITableViewCell {
@@ -128,6 +134,17 @@ extension UITableViewCell {
     open override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+    }
+}
+
+extension CGFloat {
+    
+    static func screenWidth() -> CGFloat {
+       return  UIScreen.main.bounds.size.width
+    }
+    
+    static func screenHeight() -> CGFloat {
+        return UIScreen.main.bounds.size.height
     }
 }
 

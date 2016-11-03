@@ -9,11 +9,6 @@
 import Foundation
 import UIKit
 
-let member_id = 134633
-let login_member_id = 134633
-
-let token = "A493DCC8F0E200E1CD15BD0F9009FF7A"
-
 
 /// 获取文字的高度
 ///

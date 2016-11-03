@@ -15,6 +15,7 @@ class HynNavController: UINavigationController {
         self.interactivePopGestureRecognizer?.delegate = self;
         self.interactivePopGestureRecognizer?.isEnabled = false;
         self.delegate = self;
+        self.navigationBar.isTranslucent = false
     }
 
 }
@@ -33,6 +34,7 @@ extension HynNavController:UINavigationControllerDelegate,UIGestureRecognizerDel
     
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        NotificationCenter.default.post(name: .EmotionWillHidden, object: nil, userInfo: nil)
         return true
     }
 }

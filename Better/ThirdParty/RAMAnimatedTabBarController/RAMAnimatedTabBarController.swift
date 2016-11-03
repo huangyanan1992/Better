@@ -282,6 +282,7 @@ open class RAMAnimatedTabBarController: UITabBarController {
         fatalError()
       }
       container.tag = index
+//        container.superview?.insertSubview(container, at: 0)
       
       
       let renderMode = item.iconColor.cgColor.alpha == 0 ? UIImageRenderingMode.alwaysOriginal :
@@ -323,6 +324,7 @@ open class RAMAnimatedTabBarController: UITabBarController {
       item.image = nil
       item.title = ""
       index += 1
+        
     }
   }
   
