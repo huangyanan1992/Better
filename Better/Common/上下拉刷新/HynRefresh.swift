@@ -117,7 +117,10 @@ extension UIScrollView {
     
     /// header 结束刷新
     func hyn_headerEndRefreshing() {
-        
+        self.perform(#selector(headerEndRefresh), with: nil, afterDelay: 2)
+    }
+    
+    @objc private func headerEndRefresh() {
         weak var weakSelf = self
         guard header != nil else{
             return
@@ -180,6 +183,13 @@ extension UIScrollView {
     
     /// footer 结束刷新
     func hyn_footerEndRefreshing() {
+        
+        footerEndRefresh()
+        
+    }
+    
+    @objc private func footerEndRefresh() {
+        
         weak var weakSelf = self
         guard footer != nil else{
             return
@@ -190,10 +200,10 @@ extension UIScrollView {
         let size = weakSelf!.contentSize
         weakSelf!.contentSize = CGSize(width: size.width, height: size.height - HynRefreshFooterHeight)
         
-        /** 
+        /**
          1、数据没有充满屏幕，停在（0，0）
          2、数据已经填充满屏幕，停在
-        */
+         */
         if size.height < weakSelf!.bounds.size.height {
             weakSelf!.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         }else{
