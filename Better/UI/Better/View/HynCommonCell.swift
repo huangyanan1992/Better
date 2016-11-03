@@ -9,7 +9,7 @@
 import UIKit
 
 class HynCommonCell: UITableViewCell {
-    @IBOutlet weak var avatarBtn: HynButton!
+    @IBOutlet weak var avatarBtn: UIButton!
     @IBOutlet weak var nickNameBtn: UIButton!
     @IBOutlet weak var floorLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!

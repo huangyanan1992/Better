@@ -40,6 +40,7 @@ extension HynWebViewController {
 
 typealias HynWebViewDelegate = HynWebViewController
 extension HynWebViewDelegate:UIWebViewDelegate {
+    
     func webViewDidStartLoad(_ webView: UIWebView) {
         print("webViewStartLoad")
     }

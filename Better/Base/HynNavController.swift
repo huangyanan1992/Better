@@ -32,9 +32,9 @@ extension HynNavController:UINavigationControllerDelegate,UIGestureRecognizerDel
         }
     }
     
-    
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        
         NotificationCenter.default.post(name: .EmotionWillHidden, object: nil, userInfo: nil)
-        return true
     }
+
 }

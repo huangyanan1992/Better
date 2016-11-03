@@ -19,7 +19,6 @@
 		9A191BE51DC1D39A00AA88F3 /* HynLikeNumCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A191BE31DC1D39A00AA88F3 /* HynLikeNumCollectionCell.xib */; };
 		9A1D54191DB5BC7A00AFB56F /* HynHotBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D54171DB5BC7A00AFB56F /* HynHotBannerCell.swift */; };
 		9A1D541A1DB5BC7A00AFB56F /* HynHotBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1D54181DB5BC7A00AFB56F /* HynHotBannerCell.xib */; };
-		9A1D541D1DB5C4A800AFB56F /* HynCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D541C1DB5C4A800AFB56F /* HynCircleView.swift */; };
 		9A1D541F1DB5C70300AFB56F /* HynReCommondArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D541E1DB5C70300AFB56F /* HynReCommondArticleModel.swift */; };
 		9A1D54211DB5CCDC00AFB56F /* HynBetterUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D54201DB5CCDC00AFB56F /* HynBetterUrls.swift */; };
 		9A1D54241DB5D32A00AFB56F /* HynReCommondArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D54221DB5D32A00AFB56F /* HynReCommondArticleCell.swift */; };
@@ -138,6 +137,7 @@
 		9ADF9A961DB0B68E00C8D4AC /* HynRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADF9A951DB0B68E00C8D4AC /* HynRequestManager.swift */; };
 		9AE30B1A1DCB0874009BBAA5 /* YYText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE30B191DCB0874009BBAA5 /* YYText.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		9AE30B1C1DCB2043009BBAA5 /* HynConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE30B1B1DCB2043009BBAA5 /* HynConst.swift */; };
+		9AE506C41DCB2BAC006F6808 /* HynCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE506C31DCB2BAC006F6808 /* HynCircleView.swift */; };
 		9AEEFFB11DB4BC0000166C35 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEFFA61DB4BC0000166C35 /* Converter.swift */; };
 		9AEEFFB21DB4BC0000166C35 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEFFA71DB4BC0000166C35 /* Extension.swift */; };
 		9AEEFFB31DB4BC0000166C35 /* HelpingMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEFFA91DB4BC0000166C35 /* HelpingMapper.swift */; };
@@ -156,7 +156,6 @@
 		9AF03E061DC05BF8009DC21C /* HynImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF03E041DC05BF8009DC21C /* HynImageCell.xib */; };
 		9AF03E091DC06230009DC21C /* HynLikeMembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF03E071DC06230009DC21C /* HynLikeMembersCell.swift */; };
 		9AF03E0A1DC06230009DC21C /* HynLikeMembersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF03E081DC06230009DC21C /* HynLikeMembersCell.xib */; };
-		9AF03E0C1DC062F8009DC21C /* HynButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF03E0B1DC062F8009DC21C /* HynButton.swift */; };
 		9AF03E0F1DC08226009DC21C /* HynCommondNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF03E0D1DC08226009DC21C /* HynCommondNumView.swift */; };
 		9AF03E101DC08226009DC21C /* HynCommondNumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF03E0E1DC08226009DC21C /* HynCommondNumView.xib */; };
 		9AF03E131DC0885E009DC21C /* HynCommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF03E111DC0885E009DC21C /* HynCommonCell.swift */; };
@@ -190,7 +189,6 @@
 		9A191BE31DC1D39A00AA88F3 /* HynLikeNumCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynLikeNumCollectionCell.xib; sourceTree = "<group>"; };
 		9A1D54171DB5BC7A00AFB56F /* HynHotBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynHotBannerCell.swift; sourceTree = "<group>"; };
 		9A1D54181DB5BC7A00AFB56F /* HynHotBannerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynHotBannerCell.xib; sourceTree = "<group>"; };
-		9A1D541C1DB5C4A800AFB56F /* HynCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynCircleView.swift; sourceTree = "<group>"; };
 		9A1D541E1DB5C70300AFB56F /* HynReCommondArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynReCommondArticleModel.swift; sourceTree = "<group>"; };
 		9A1D54201DB5CCDC00AFB56F /* HynBetterUrls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynBetterUrls.swift; sourceTree = "<group>"; };
 		9A1D54221DB5D32A00AFB56F /* HynReCommondArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynReCommondArticleCell.swift; sourceTree = "<group>"; };
@@ -312,6 +310,7 @@
 		9ADF9A951DB0B68E00C8D4AC /* HynRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynRequestManager.swift; sourceTree = "<group>"; };
 		9AE30B191DCB0874009BBAA5 /* YYText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYText.framework; path = "../../../Library/Developer/Xcode/DerivedData/Better-ejqjpeshlrvcbxfngswvwhimzzbh/Build/Products/Debug-iphonesimulator/YYText/YYText.framework"; sourceTree = "<group>"; };
 		9AE30B1B1DCB2043009BBAA5 /* HynConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynConst.swift; sourceTree = "<group>"; };
+		9AE506C31DCB2BAC006F6808 /* HynCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynCircleView.swift; sourceTree = "<group>"; };
 		9AEEFFA61DB4BC0000166C35 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		9AEEFFA71DB4BC0000166C35 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		9AEEFFA81DB4BC0000166C35 /* HandyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandyJSON.h; sourceTree = "<group>"; };
@@ -331,7 +330,6 @@
 		9AF03E041DC05BF8009DC21C /* HynImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynImageCell.xib; sourceTree = "<group>"; };
 		9AF03E071DC06230009DC21C /* HynLikeMembersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynLikeMembersCell.swift; sourceTree = "<group>"; };
 		9AF03E081DC06230009DC21C /* HynLikeMembersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynLikeMembersCell.xib; sourceTree = "<group>"; };
-		9AF03E0B1DC062F8009DC21C /* HynButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynButton.swift; sourceTree = "<group>"; };
 		9AF03E0D1DC08226009DC21C /* HynCommondNumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynCommondNumView.swift; sourceTree = "<group>"; };
 		9AF03E0E1DC08226009DC21C /* HynCommondNumView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynCommondNumView.xib; sourceTree = "<group>"; };
 		9AF03E111DC0885E009DC21C /* HynCommonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynCommonCell.swift; sourceTree = "<group>"; };
@@ -422,7 +420,8 @@
 				9AF1C3DA1DB8CA800017B6ED /* 主题 */,
 				9A0C408B1DB88DAB00B5B814 /* 上下拉刷新 */,
 				9AD4F47E1DB758E000A4487B /* 表情管理 */,
-				9A1D541C1DB5C4A800AFB56F /* HynCircleView.swift */,
+				9AE506C21DCB2B94006F6808 /* 轮播图 */,
+				9AE506C51DCB2BCA006F6808 /* 相册管理 */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -452,7 +451,6 @@
 				9A1D54261DB5EE7D00AFB56F /* HynFunc.swift */,
 				9AE30B1B1DCB2043009BBAA5 /* HynConst.swift */,
 				9AB189F51DB76C6900AB1003 /* HynWebViewController.swift */,
-				9AF03E0B1DC062F8009DC21C /* HynButton.swift */,
 				9A5500031DC2F887006C7409 /* HynNavController.swift */,
 			);
 			path = Base;
@@ -641,6 +639,21 @@
 				9ADF9A951DB0B68E00C8D4AC /* HynRequestManager.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		9AE506C21DCB2B94006F6808 /* 轮播图 */ = {
+			isa = PBXGroup;
+			children = (
+				9AE506C31DCB2BAC006F6808 /* HynCircleView.swift */,
+			);
+			path = "轮播图";
+			sourceTree = "<group>";
+		};
+		9AE506C51DCB2BCA006F6808 /* 相册管理 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "相册管理";
 			sourceTree = "<group>";
 		};
 		9AEEFFA51DB4BC0000166C35 /* HandyJSON */ = {
@@ -1079,13 +1092,12 @@
 				9AFCE0BD1DB0EAEB00C97633 /* RAMFumeAnimation.swift in Sources */,
 				9A1D54241DB5D32A00AFB56F /* HynReCommondArticleCell.swift in Sources */,
 				9A1D541F1DB5C70300AFB56F /* HynReCommondArticleModel.swift in Sources */,
-				9AF03E0C1DC062F8009DC21C /* HynButton.swift in Sources */,
-				9A1D541D1DB5C4A800AFB56F /* HynCircleView.swift in Sources */,
 				9A0C40911DB8925400B5B814 /* HynRefreshHeader.swift in Sources */,
 				9AFCE0BE1DB0EAEB00C97633 /* RAMRotationAnimation.swift in Sources */,
 				9AF03DF81DC043C1009DC21C /* HynTopicModel.swift in Sources */,
 				9A0C408D1DB88DCF00B5B814 /* HynRefresh.swift in Sources */,
 				9A0C40971DB8965300B5B814 /* HynRefreshEnum.swift in Sources */,
+				9AE506C41DCB2BAC006F6808 /* HynCircleView.swift in Sources */,
 				9A1D54211DB5CCDC00AFB56F /* HynBetterUrls.swift in Sources */,
 				9AA10AE01DC0BCE900E89729 /* HynLikeMemberCollectionCell.swift in Sources */,
 				9AB189F61DB76C6900AB1003 /* HynWebViewController.swift in Sources */,

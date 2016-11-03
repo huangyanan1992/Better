@@ -31,7 +31,6 @@ class HynEmotionScrollView: UIScrollView {
             for view in subviews {
                 view.removeFromSuperview()
             }
-            betterDic?["[删除]"] = "删除"
             
             pageNum = dataArray.count/27+1
             self.contentSize = CGSize(width: CGFloat(pageNum)*(.screenWidth()-scrollSpace), height: itemHeight*3)

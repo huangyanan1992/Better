@@ -77,7 +77,43 @@ extension UIScreen {
     }
 }
 
+@IBDesignable
 extension UIView {
+    
+    
+    /// 圆角
+    @IBInspectable var hyn_cornerRadios:CGFloat {
+        get {
+            return self.layer.cornerRadius
+        }
+        set(newValue) {
+            self.layer.cornerRadius = newValue
+        }
+    }
+    
+    /// 边框宽度
+    @IBInspectable var hyn_borderWidth:CGFloat {
+        get {
+            return self.layer.borderWidth
+        }
+        
+        set(newValue) {
+            self.layer.borderWidth = newValue
+        }
+    }
+    
+    /// 边框颜色
+    @IBInspectable var hyn_borderColor:UIColor {
+        get {
+            guard (self.layer.borderColor != nil) else {
+                return UIColor.clear
+            }
+            return UIColor.init(cgColor: self.layer.borderColor!)
+        }
+        set(newValue) {
+            self.layer.borderColor = newValue.cgColor
+        }
+    }
     
     func viewController() -> UIViewController? {
         var next = self.next

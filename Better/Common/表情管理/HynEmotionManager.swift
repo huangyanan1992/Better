@@ -184,17 +184,6 @@ extension HynEmotionManager {
         }
         
         i = 0
-        for _ in betterArray {
-            i = i + 1
-            if i % 27 == 0 {
-                betterArray.insert("[删除]", at: i-1)
-            }
-        }
-        if i%27 != 0 {
-            betterArray.append("[删除]")
-        }
-        
-        i = 0
         for emotionName in (signInFaceDic?.keys)! {
             i = i + 1
             signInArray.append(emotionName)
@@ -205,31 +194,10 @@ extension HynEmotionManager {
         }
         
         i = 0
-        for _ in signInArray {
-            i = i + 1
-            if i % 27 == 0 {
-                signInArray.insert("[删除]", at: i-1)
-            }
-        }
-        if i%27 != 0 {
-            signInArray.append("[删除]")
-        }
-        
-        i = 0
         for emotionName in (faceNameDic?.keys)! {
             i = i + 1
             faceNameArray.append(emotionName)
         }
         
-        i = 0
-        for _ in faceNameArray {
-            i = i + 1
-            if i % 27 == 0 {
-                faceNameArray.insert("[删除]", at: i-1)
-            }
-        }
-        if i%27 != 0 {
-            faceNameArray.append("[删除]")
-        }
     }
 }

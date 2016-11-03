@@ -116,25 +116,16 @@ extension EmotionCreateSubViews {
         
         scrollView = HynEmotionScrollView.init(frame: CGRect(x: scrollSpace/2, y: 0, width: .screenWidth()-scrollSpace, height: itemHeight*3))
         scrollView?.dataArray = HynEmotionManager.shared.betterArray
-        scrollView?.emotionDidClick = { emotionStr in
-            if emotionStr == "[删除]" {
-                guard ((self.emotionTextView?.yy_textView.text) != nil) else {
-                    return
-                }
-                self.emotionTextView?.yy_textView.deleteBackward()
-                
-            }
-            else {
-                let text = NSMutableAttributedString.init(attributedString: (self.emotionTextView?.yy_textView.attributedText)!) 
-                
-                let emotionText = NSMutableAttributedString.init(string: emotionStr)
-                
-                emotionText.yy_setTextBinding(YYTextBinding.init(deleteConfirm: false), range: emotionText.yy_rangeOfAll())
-                text.append(emotionText)
-                text.append(NSMutableAttributedString.init(string: ""))
-                
-                self.emotionTextView?.yy_textView.attributedText = text
-            }
+        scrollView?.emotionDidClick = { [weak self] emotionStr in
+            
+            let text = NSMutableAttributedString.init(attributedString: (self?.emotionTextView?.yy_textView.attributedText)!)
+            
+            let emotionText = NSMutableAttributedString.init(string: emotionStr)
+            
+            emotionText.yy_setTextBinding(YYTextBinding.init(deleteConfirm: false), range: emotionText.yy_rangeOfAll())
+            text.append(emotionText)
+            
+            self?.emotionTextView?.yy_textView.attributedText = text
             
         }
         scrollBgView.addSubview(scrollView!)
