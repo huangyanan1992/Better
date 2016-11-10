@@ -16,13 +16,23 @@
                     <view key="view" contentMode="scaleToFill" id="rv0-Ng-Yqr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOj-Ma-2Iq">
+                                <frame key="frameInset" minX="192" minY="328" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="相册"/>
+                                <connections>
+                                    <action selector="test:" destination="Szg-OR-s4t" eventType="touchUpInside" id="NBr-Pl-rEc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="3fr-tb-6pf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCF-3E-mNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="-927"/>
+            <point key="canvasLocation" x="1568.1159420289857" y="-927.71739130434787"/>
         </scene>
         <!--Hyn Newest View Controller-->
         <scene sceneID="T4E-VQ-bqB">

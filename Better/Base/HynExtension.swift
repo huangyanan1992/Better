@@ -11,8 +11,6 @@ import UIKit
 
 extension UIViewController {
     
-    
-    
     /// 返回键
     func setUpBackBtn() {
         let backImage = UIImage(named: "NaviBtn_Back")!
@@ -26,13 +24,13 @@ extension UIViewController {
         self.setLeftBarButtonItem(barButtonItem: UIBarButtonItem.init(customView: backBtn))
     }
     
-    func back() {
-        guard (self.navigationController != nil) else {
-            self.dismiss(animated: true, completion: nil)
-            return
+    @objc private func back() {
+        if (self.navigationController?.viewControllers.count)! > 1 {
+            navigationController?.popViewController(animated: true)
         }
-        
-        self.navigationController?.popViewController(animated: true)        
+        else {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     func setLeftBarButtonItem(barButtonItem:UIBarButtonItem) {

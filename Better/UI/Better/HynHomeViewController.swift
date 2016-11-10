@@ -87,10 +87,10 @@ extension HynHomeViewControllerNavBar {
     @objc func segmentedAction(segment:UISegmentedControl) {
         if segment.selectedSegmentIndex == 0 {
             
-            pageViewController.setViewControllers([reCommondViewController], direction: .forward, animated: false, completion: nil)
+            pageViewController.setViewControllers([reCommondViewController], direction: .reverse, animated: true, completion: nil)
         }
         else if segment.selectedSegmentIndex == 1 {
-            pageViewController.setViewControllers([newestViewController], direction: .reverse, animated: false, completion: nil)
+            pageViewController.setViewControllers([newestViewController], direction: .forward, animated: true, completion: nil)
         }
     }
     
@@ -105,6 +105,9 @@ private typealias HynPageDataSource = HynHomeViewController
 extension HynPageDataSource:UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        if viewController.isKind(of: HynNewestViewController.self) {
+            return reCommondViewController
+        }
         return nil
     }
     

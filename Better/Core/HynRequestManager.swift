@@ -67,7 +67,7 @@ class HynRequestManager: NSObject {
                     block(nil,response.result.error as NSError?)
                     return
                 }
-                let swiftyJsonVar = JSON(response.result.value)
+                let swiftyJsonVar = JSON(response.result.value as Any)
                 block(swiftyJsonVar.dictionary,nil)
                 
             })
@@ -78,7 +78,7 @@ class HynRequestManager: NSObject {
                     block(nil,response.result.error as NSError?)
                     return
                 }
-                let swiftyJsonVar = JSON(response.result.value)
+                let swiftyJsonVar = JSON(response.result.value as Any)
                 block(swiftyJsonVar.dictionary,nil)
             })
         }

@@ -21,8 +21,6 @@ private var lastRefreshObj = HynRefreshObject.header
 private var footerView:UIView?
 
 private let contentOffsetKeyPath = "contentOffset"
-//private var obserVerIsRemove:Bool?
-//private var currentClass:String?
 
 private func address<T: AnyObject>(o: T) -> String {
     return String.init(format: "%018p", unsafeBitCast(o, to: Int.self))
@@ -366,7 +364,7 @@ extension UIScrollView {
         guard footer != nil else{
             return
         }
-        if footer!.refreshStatus == .waitRefresh {
+         if footer!.refreshStatus == .waitRefresh {
             // 设置scroll的contentsize 以及滑动offset
             let size = weakSelf!.contentSize
             weakSelf!.contentSize = CGSize(width: size.width, height: size.height + HynRefreshFooterHeight)
@@ -378,7 +376,7 @@ extension UIScrollView {
                 weakSelf!.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
             }
             else{
-                let offSet = weakSelf!.contentSize.height-weakSelf!.bounds.size.height
+                let offSet = weakSelf!.contentSize.height-weakSelf!.frame.size.height
                 weakSelf!.setContentOffset(CGPoint(x: 0, y: offSet), animated: true)
             }
             // 切换状态
