@@ -33,6 +33,13 @@ class HynPhotosViewController: UIViewController {
         }
     }
     
+    typealias cameraImageClosure = (_ image:UIImage)->()
+    fileprivate var cameraImage:cameraImageClosure?
+    
+    func requestCameraImage(image:@escaping cameraImageClosure) {
+        cameraImage = image
+    }
+    
     ///标题
     lazy var titleButton:UIButton = {
         let button = UIButton.init(frame: CGRect(x: (.screenWidth()-100)/2.0, y: 0, width: 100, height: 30))
@@ -221,13 +228,21 @@ extension HynPhotosViewController:UICollectionViewDelegateFlowLayout,UICollectio
         }
         else {
             
-            HynCameraManager.requestCameraAuthorizationStatus(complite: { 
+            HynCameraManager.requestCameraAuthorizationStatus(complite: {  [weak self] in
                 let imagePickerViewController = HynImagePickerController.init()
                 
                 imagePickerViewController.requstImage(finish: { (image) in
-                    print(image)
+                    guard (self?.cameraImage != nil) else {
+                        return
+                    }
+                    self?.cameraImage!(image)
+                    
+                    DispatchQueue.main.async {
+                        self?.dismiss(animated: false, completion: nil)
+                    }
+                    
                 })
-                self.present(imagePickerViewController, animated: true, completion: nil)
+                self?.present(imagePickerViewController, animated: true, completion: nil)
             })
             
         }

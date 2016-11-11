@@ -24,7 +24,7 @@ extension UIViewController {
         self.setLeftBarButtonItem(barButtonItem: UIBarButtonItem.init(customView: backBtn))
     }
     
-    @objc private func back() {
+    @objc func back() {
         if (self.navigationController?.viewControllers.count)! > 1 {
             navigationController?.popViewController(animated: true)
         }

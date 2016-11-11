@@ -19,8 +19,13 @@ class HynChannelViewController: UIViewController {
         
         let imagePickerVC = HynImagePickerNavController.init()
         present(imagePickerVC, animated: true, completion: nil)
+        
         imagePickerVC.imagesDidSelected = {
             print($0)
+        }
+        
+        imagePickerVC.requestCameraImage { (image) in
+            print(image)
         }
         
     }

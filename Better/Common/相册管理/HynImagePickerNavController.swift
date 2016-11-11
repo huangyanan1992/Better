@@ -25,6 +25,15 @@ class HynImagePickerNavController: HynNavController {
     
     /// 选中的照片
     var imagesDidSelected:((_ selectedAsset:[PHAsset])->())?
+    
+    typealias cameraImageClosure = (_ image:UIImage)->()
+    private var cameraImage:cameraImageClosure?
+    
+    func requestCameraImage(image:@escaping cameraImageClosure) {
+        cameraImage = image
+//        self.dismiss(animated: true, completion: nil)
+    }
+    
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -50,6 +59,9 @@ class HynImagePickerNavController: HynNavController {
                     }
                     self?.imagesDidSelected!($0)
                 }
+                self?.photosViewController.requestCameraImage(image: { (image) in
+                    self?.cameraImage!(image)
+                })
             }
         }
         
