@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 class HynTopicViewController: UIViewController {
     
@@ -23,7 +24,7 @@ class HynTopicViewController: UIViewController {
         }
     }
     var topicModel:HynTopicModel?
-    var commondArray:[HynCommondModel]?
+    var commondArray:[HynCommondModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,15 +40,22 @@ typealias TopicRefresh = HynTopicViewController
 extension TopicRefresh {
     
     func addRefresh() {
-        tableView.hyn_addRefreshHeader { [weak self] in
-            self?.loadArticle()
-        }
-        
-        tableView.hyn_addRefreshFooter { [weak self] in
+        tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
             
-            self?.pageSize = (self?.pageSize)! + 15
-            self?.loadCommond()
-        }
+            self.topicModel = nil
+            self.tableView.mj_footer.resetNoMoreData()
+            self.pageSize = 15
+            self.loadArticle()
+            
+        })
+        
+        tableView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingBlock: {
+            
+            self.loadCommond()
+            self.pageSize = self.pageSize + 15
+            
+        })
+        
     }
     
 }
@@ -72,7 +80,8 @@ extension TopicSubViews {
     }
     
     private func setUpTableView() {
-        tableView.frame = CGRect.init(x: 0, y: 0, width: .screenWidth(), height: .screenHeight()-64-44)
+        
+        tableView.frame = CGRect.init(x: 0, y: 0, width: .screenWidth(), height: .screenHeight()-64)
         tableView.backgroundColor = HynThemeManager.shared.backgroundColor
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(keyBoardHiden))
         tap.numberOfTapsRequired = 1
@@ -80,6 +89,7 @@ extension TopicSubViews {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
     
     
@@ -109,11 +119,14 @@ typealias TopicLoadData = HynTopicViewController
 extension TopicLoadData {
     
     func loadData() {
+        
         loadArticle()
         loadCommond()
+        
     }
     
     func loadArticle() {
+        
         HynTopicModel.getArticleById(articleId: articleId!) { [weak self] (topicModel, error) in
             
             guard (topicModel != nil) else {
@@ -121,23 +134,25 @@ extension TopicLoadData {
             }
             self?.topicModel = topicModel
             self?.tableView.reloadData()
-            self?.tableView.hyn_headerEndRefreshing()
+            self?.tableView.mj_header.endRefreshing()
             
         }
     }
     
     func loadCommond() {
         HynCommondModel.getCommond(articleId: articleId!, pageSize: pageSize) { [weak self] (commondArray, error) in
+            
             guard (commondArray != nil) else {
                 return
             }
-            guard self?.commondArray?.count != commondArray?.count else {
-                self?.tableView.hyn_footerDataLoadOver()
+            guard self?.commondArray.count != commondArray?.count else {
+                self?.tableView.mj_footer.endRefreshingWithNoMoreData()
                 return
             }
-            self?.commondArray = commondArray
+            self?.commondArray = commondArray!
             self?.tableView.reloadData()
-            self?.tableView.hyn_footerEndRefreshing()
+            self?.tableView.mj_footer.endRefreshing()
+            
         }
     }
     
@@ -154,10 +169,7 @@ extension TopicDelegate:UITableViewDelegate,UITableViewDataSource {
             return 2 + (topicModel?.article?.picsModel?.count)!
         }
         else {
-            guard (commondArray != nil) else {
-                return 0
-            }
-            return (commondArray?.count)!
+            return commondArray.count
         }
     }
     
@@ -195,7 +207,7 @@ extension TopicDelegate:UITableViewDelegate,UITableViewDataSource {
         else {
             
             let cell:HynCommonCell = tableView.dequeueReusableCell(withIdentifier: HynCommonCell.className(), for: indexPath) as! HynCommonCell
-            cell.commondModel = commondArray?[indexPath.row]
+            cell.commondModel = commondArray[indexPath.row]
             return cell
             
         }
@@ -241,7 +253,7 @@ extension TopicDelegate:UITableViewDelegate,UITableViewDataSource {
             }
         }
         else {
-            return 83 + (commondArray?[indexPath.row].contentHeight!)!+5
+            return 83 + commondArray[indexPath.row].contentHeight!+5
         }
     }
     

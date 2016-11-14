@@ -176,13 +176,13 @@ extension Date {
         if isToday() {
             let timeInterval = Date().timeIntervalSince1970 - self.timeIntervalSince1970
             if timeInterval >= D_Hour {
-                return String.init(format: "%d小时前", timeInterval/D_Hour)
+                return String.init(format: "%d小时前", Int(timeInterval/D_Hour))
             }
             else {
                 guard timeInterval >= D_Minute else {
                     return "刚刚"
                 }
-                return String.init(format: "%d分钟前", timeInterval/D_Minute)
+                return String.init(format: "%d分钟前", Int(timeInterval/D_Minute))
             }
         }
         else if isYesterday() {

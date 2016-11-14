@@ -17,15 +17,18 @@ class HynChannelViewController: UIViewController {
     
     @IBAction func test(_ sender: UIButton) {
         
-        let imagePickerVC = HynImagePickerNavController.init()
-        present(imagePickerVC, animated: true, completion: nil)
-        
-        imagePickerVC.imagesDidSelected = {
-            print($0)
-        }
-        
-        imagePickerVC.requestCameraImage { (image) in
-            print(image)
+        HynCameraManager.requestCameraAuthorizationStatus { [weak self] (_) in
+            
+            let imagePickerVC = HynImagePickerNavController.init()
+            self?.present(imagePickerVC, animated: true, completion: nil)
+            
+            imagePickerVC.imagesDidSelected = {
+                print($0)
+            }
+            
+            imagePickerVC.requestCameraImage { (image) in
+                print(image)
+            }
         }
         
     }

@@ -225,23 +225,25 @@ extension HynPhotosViewController:UICollectionViewDelegateFlowLayout,UICollectio
         else {
             
             HynCameraManager.requestCameraAuthorizationStatus(complite: {  [weak self] in
-                
-                HynCameraManager.isCameraAvailable {
-                    let imagePickerViewController = HynImagePickerController.init()
-                    
-                    imagePickerViewController.requstImage(finish: { (image) in
-                        guard (self?.cameraImage != nil) else {
-                            return
-                        }
-                        self?.cameraImage!(image)
-                        
-                        DispatchQueue.main.async {
-                            self?.dismiss(animated: false, completion: nil)
-                        }
-                        
-                    })
-                    self?.present(imagePickerViewController, animated: true, completion: nil)
+                guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+                    return
                 }
+                
+                let imagePickerViewController = HynImagePickerController.init()
+                
+                imagePickerViewController.requstImage(finish: { (image) in
+                    guard (self?.cameraImage != nil) else {
+                        return
+                    }
+                    self?.cameraImage!(image)
+                    
+                    DispatchQueue.main.async {
+                        self?.dismiss(animated: false, completion: nil)
+                    }
+                    
+                })
+                self?.present(imagePickerViewController, animated: true, completion: nil)
+                
             })
             
         }

@@ -8,13 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		285BE21C098B616969DAD0F1 /* Pods_Better.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F36AF6D3CCF05748B037D /* Pods_Better.framework */; };
-		9A0C408D1DB88DCF00B5B814 /* HynRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C408C1DB88DCF00B5B814 /* HynRefresh.swift */; };
-		9A0C408F1DB8923F00B5B814 /* HynRefreshHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A0C408E1DB8923F00B5B814 /* HynRefreshHeader.xib */; };
-		9A0C40911DB8925400B5B814 /* HynRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C40901DB8925400B5B814 /* HynRefreshHeader.swift */; };
-		9A0C40931DB894F500B5B814 /* HynRefreshFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A0C40921DB894F500B5B814 /* HynRefreshFooter.xib */; };
-		9A0C40951DB8950A00B5B814 /* HynRefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C40941DB8950A00B5B814 /* HynRefreshFooter.swift */; };
-		9A0C40971DB8965300B5B814 /* HynRefreshEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C40961DB8965300B5B814 /* HynRefreshEnum.swift */; };
-		9A0C40991DB89AB700B5B814 /* HynRefreshConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0C40981DB89AB700B5B814 /* HynRefreshConst.swift */; };
 		9A191BE41DC1D39A00AA88F3 /* HynLikeNumCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A191BE21DC1D39A00AA88F3 /* HynLikeNumCollectionCell.swift */; };
 		9A191BE51DC1D39A00AA88F3 /* HynLikeNumCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A191BE31DC1D39A00AA88F3 /* HynLikeNumCollectionCell.xib */; };
 		9A1D54191DB5BC7A00AFB56F /* HynHotBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D54171DB5BC7A00AFB56F /* HynHotBannerCell.swift */; };
@@ -26,6 +19,8 @@
 		9A1D54271DB5EE7D00AFB56F /* HynFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D54261DB5EE7D00AFB56F /* HynFunc.swift */; };
 		9A2D8B5B1DC86706003A1C35 /* HynEmotionScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D8B5A1DC86706003A1C35 /* HynEmotionScrollView.swift */; };
 		9A34326D1DB9FE59009BD131 /* HynDateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34326C1DB9FE59009BD131 /* HynDateUtils.swift */; };
+		9A54CFEE1DD9608B000625E4 /* SQAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A54CFED1DD9608B000625E4 /* SQAlert.swift */; };
+		9A54CFF01DD9859B000625E4 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A54CFEF1DD9859B000625E4 /* MJRefresh.framework */; };
 		9A5500041DC2F887006C7409 /* HynNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5500031DC2F887006C7409 /* HynNavController.swift */; };
 		9A8F09D41DD169D80030D2EB /* HynImagePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F09D21DD169D80030D2EB /* HynImagePickerCell.swift */; };
 		9A8F09D51DD169D80030D2EB /* HynImagePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8F09D31DD169D80030D2EB /* HynImagePickerCell.xib */; };
@@ -191,13 +186,6 @@
 
 /* Begin PBXFileReference section */
 		94E9E2A7034A815ABB057EAB /* Pods-Better.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Better.release.xcconfig"; path = "Pods/Target Support Files/Pods-Better/Pods-Better.release.xcconfig"; sourceTree = "<group>"; };
-		9A0C408C1DB88DCF00B5B814 /* HynRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynRefresh.swift; sourceTree = "<group>"; };
-		9A0C408E1DB8923F00B5B814 /* HynRefreshHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynRefreshHeader.xib; sourceTree = "<group>"; };
-		9A0C40901DB8925400B5B814 /* HynRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynRefreshHeader.swift; sourceTree = "<group>"; };
-		9A0C40921DB894F500B5B814 /* HynRefreshFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynRefreshFooter.xib; sourceTree = "<group>"; };
-		9A0C40941DB8950A00B5B814 /* HynRefreshFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynRefreshFooter.swift; sourceTree = "<group>"; };
-		9A0C40961DB8965300B5B814 /* HynRefreshEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynRefreshEnum.swift; sourceTree = "<group>"; };
-		9A0C40981DB89AB700B5B814 /* HynRefreshConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynRefreshConst.swift; sourceTree = "<group>"; };
 		9A191BE21DC1D39A00AA88F3 /* HynLikeNumCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynLikeNumCollectionCell.swift; sourceTree = "<group>"; };
 		9A191BE31DC1D39A00AA88F3 /* HynLikeNumCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynLikeNumCollectionCell.xib; sourceTree = "<group>"; };
 		9A1D54171DB5BC7A00AFB56F /* HynHotBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynHotBannerCell.swift; sourceTree = "<group>"; };
@@ -209,6 +197,8 @@
 		9A1D54261DB5EE7D00AFB56F /* HynFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynFunc.swift; sourceTree = "<group>"; };
 		9A2D8B5A1DC86706003A1C35 /* HynEmotionScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynEmotionScrollView.swift; sourceTree = "<group>"; };
 		9A34326C1DB9FE59009BD131 /* HynDateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynDateUtils.swift; sourceTree = "<group>"; };
+		9A54CFED1DD9608B000625E4 /* SQAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQAlert.swift; sourceTree = "<group>"; };
+		9A54CFEF1DD9859B000625E4 /* MJRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJRefresh.framework; path = "../../../Library/Developer/Xcode/DerivedData/Better-ejqjpeshlrvcbxfngswvwhimzzbh/Build/Products/Debug-iphonesimulator/MJRefresh/MJRefresh.framework"; sourceTree = "<group>"; };
 		9A5500031DC2F887006C7409 /* HynNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynNavController.swift; sourceTree = "<group>"; };
 		9A8F09D21DD169D80030D2EB /* HynImagePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynImagePickerCell.swift; sourceTree = "<group>"; };
 		9A8F09D31DD169D80030D2EB /* HynImagePickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynImagePickerCell.xib; sourceTree = "<group>"; };
@@ -383,6 +373,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A54CFF01DD9859B000625E4 /* MJRefresh.framework in Frameworks */,
 				9AE30B1A1DCB0874009BBAA5 /* YYText.framework in Frameworks */,
 				285BE21C098B616969DAD0F1 /* Pods_Better.framework in Frameworks */,
 			);
@@ -394,24 +385,11 @@
 		10F4A1B71E5EA67CB1CA72F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A54CFEF1DD9859B000625E4 /* MJRefresh.framework */,
 				9AE30B191DCB0874009BBAA5 /* YYText.framework */,
 				C96F36AF6D3CCF05748B037D /* Pods_Better.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9A0C408B1DB88DAB00B5B814 /* 上下拉刷新 */ = {
-			isa = PBXGroup;
-			children = (
-				9A0C408C1DB88DCF00B5B814 /* HynRefresh.swift */,
-				9A0C40961DB8965300B5B814 /* HynRefreshEnum.swift */,
-				9A0C40981DB89AB700B5B814 /* HynRefreshConst.swift */,
-				9A0C40901DB8925400B5B814 /* HynRefreshHeader.swift */,
-				9A0C408E1DB8923F00B5B814 /* HynRefreshHeader.xib */,
-				9A0C40941DB8950A00B5B814 /* HynRefreshFooter.swift */,
-				9A0C40921DB894F500B5B814 /* HynRefreshFooter.xib */,
-			);
-			path = "上下拉刷新";
 			sourceTree = "<group>";
 		};
 		9A1D54161DB5BC5600AFB56F /* View */ = {
@@ -442,9 +420,9 @@
 		9A1D541B1DB5C49F00AFB56F /* 公共 */ = {
 			isa = PBXGroup;
 			children = (
+				9A54CFEC1DD96082000625E4 /* Alert */,
 				9A34326B1DB9FE47009BD131 /* DateUtils */,
 				9AF1C3DA1DB8CA800017B6ED /* 主题 */,
-				9A0C408B1DB88DAB00B5B814 /* 上下拉刷新 */,
 				9AD4F47E1DB758E000A4487B /* 表情管理 */,
 				9AE506C21DCB2B94006F6808 /* 轮播图 */,
 				9AE506C51DCB2BCA006F6808 /* 相册管理 */,
@@ -460,6 +438,14 @@
 			);
 			name = DateUtils;
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		9A54CFEC1DD96082000625E4 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				9A54CFED1DD9608B000625E4 /* SQAlert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		9A8F09D61DD176F20030D2EB /* Model */ = {
@@ -983,7 +969,6 @@
 				9A8F09E41DD1CE5E0030D2EB /* HynAlbumCell.xib in Resources */,
 				9AD4F44B1DB757C300A4487B /* 默认签到表情.png in Resources */,
 				9AD4F4611DB757C300A4487B /* 无聊.png in Resources */,
-				9A0C408F1DB8923F00B5B814 /* HynRefreshHeader.xib in Resources */,
 				9AD4F4681DB757C300A4487B /* 小舌头.png in Resources */,
 				9A1D541A1DB5BC7A00AFB56F /* HynHotBannerCell.xib in Resources */,
 				9AF03E021DC05879009DC21C /* HynArticleCell.xib in Resources */,
@@ -1021,7 +1006,6 @@
 				9ADF99C51DB0B0A900C8D4AC /* Main.storyboard in Resources */,
 				9AD4F4241DB757C300A4487B /* 鄙视.png in Resources */,
 				9AD4F44A1DB757C300A4487B /* 默认表情.png in Resources */,
-				9A0C40931DB894F500B5B814 /* HynRefreshFooter.xib in Resources */,
 				9AD4F42C1DB757C300A4487B /* 得意.png in Resources */,
 				9AD4F4391DB757C300A4487B /* 坏笑.png in Resources */,
 				9AD4F4211DB757C300A4487B /* 拜拜.png in Resources */,
@@ -1106,6 +1090,7 @@
 				9ADB070B1DD458C700959CB5 /* JSONSerializer.swift in Sources */,
 				9AFCE0BF1DB0EAEB00C97633 /* RAMTransitionItemAnimations.swift in Sources */,
 				9AFCE0671DB0CF2700C97633 /* HynFoundViewController.swift in Sources */,
+				9A54CFEE1DD9608B000625E4 /* SQAlert.swift in Sources */,
 				9AB1B3621DC88FE000111740 /* HynEmotionTextView.swift in Sources */,
 				9AFCE0691DB0CF3F00C97633 /* HynChannelViewController.swift in Sources */,
 				9A191BE41DC1D39A00AA88F3 /* HynLikeNumCollectionCell.swift in Sources */,
@@ -1122,7 +1107,6 @@
 				9AB189FA1DB77F7B00AB1003 /* HynHomeViewController.swift in Sources */,
 				9A8F09D41DD169D80030D2EB /* HynImagePickerCell.swift in Sources */,
 				9ADF99C21DB0B0A900C8D4AC /* ViewController.swift in Sources */,
-				9A0C40991DB89AB700B5B814 /* HynRefreshConst.swift in Sources */,
 				9ADF99C01DB0B0A900C8D4AC /* AppDelegate.swift in Sources */,
 				9AF03DFA1DC0448A009DC21C /* HynArticle.swift in Sources */,
 				9A8F09D81DD177140030D2EB /* HynAlbumItem.swift in Sources */,
@@ -1145,21 +1129,17 @@
 				9AFCE0611DB0CEE100C97633 /* HynReCommondViewController.swift in Sources */,
 				9AB189F81DB77EE200AB1003 /* HynNewestViewController.swift in Sources */,
 				9AFCE0C11DB0EAEB00C97633 /* RAMBadge.swift in Sources */,
-				9A0C40951DB8950A00B5B814 /* HynRefreshFooter.swift in Sources */,
 				9AB189F41DB75BB600AB1003 /* HynEmotionManager.swift in Sources */,
 				9AF03E051DC05BF8009DC21C /* HynImageCell.swift in Sources */,
 				9AFCE0BD1DB0EAEB00C97633 /* RAMFumeAnimation.swift in Sources */,
 				9A1D54241DB5D32A00AFB56F /* HynReCommondArticleCell.swift in Sources */,
 				9A1D541F1DB5C70300AFB56F /* HynReCommondArticleModel.swift in Sources */,
-				9A0C40911DB8925400B5B814 /* HynRefreshHeader.swift in Sources */,
 				9ADB068B1DD44EE400959CB5 /* HynImagePickerController.swift in Sources */,
 				9AFCE0BE1DB0EAEB00C97633 /* RAMRotationAnimation.swift in Sources */,
 				9AF03DF81DC043C1009DC21C /* HynTopicModel.swift in Sources */,
 				9ADB070A1DD458C700959CB5 /* JSONDeserializer.swift in Sources */,
 				9ADB070C1DD458C700959CB5 /* Property.swift in Sources */,
-				9A0C408D1DB88DCF00B5B814 /* HynRefresh.swift in Sources */,
 				9A8F09E31DD1CE5E0030D2EB /* HynAlbumCell.swift in Sources */,
-				9A0C40971DB8965300B5B814 /* HynRefreshEnum.swift in Sources */,
 				9AE506C41DCB2BAC006F6808 /* HynCircleView.swift in Sources */,
 				9A1D54211DB5CCDC00AFB56F /* HynBetterUrls.swift in Sources */,
 				9AA10AE01DC0BCE900E89729 /* HynLikeMemberCollectionCell.swift in Sources */,

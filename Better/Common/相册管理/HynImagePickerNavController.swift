@@ -50,19 +50,18 @@ class HynImagePickerNavController: HynNavController {
         super.viewDidLoad()
         
         view.backgroundColor = HynThemeManager.shared.backgroundColor
-        HynCameraManager.requestCameraAuthorizationStatus { [weak self] (_) in
             
-            self?.setViewControllers([(self?.photosViewController)!], animated: true)
-            self?.photosViewController.imagesDidSelected = {
-                guard (self?.imagesDidSelected != nil) else {
-                    return
-                }
-                self?.imagesDidSelected!($0)
+        self.setViewControllers([(self.photosViewController)], animated: true)
+        self.photosViewController.imagesDidSelected = {
+            guard (self.imagesDidSelected != nil) else {
+                return
             }
-            self?.photosViewController.requestCameraImage(image: { (image) in
-                self?.cameraImage!(image)
-            })
+            self.imagesDidSelected!($0)
         }
+        self.photosViewController.requestCameraImage(image: { [weak self] (image) in
+            self?.cameraImage!(image)
+        })
+        
     }
 
 }

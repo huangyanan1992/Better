@@ -9,10 +9,11 @@
 import UIKit
 import Kingfisher
 import DGElasticPullToRefresh
+import MJRefresh
 
 class HynReCommondViewController: UITableViewController {
     
-    var dataArray:[HynReCommondArticleModel]?
+    var dataArray:[HynReCommondArticleModel] = []
     var currentPage:Int = 1
 
     override func viewDidLoad() {
@@ -25,7 +26,6 @@ class HynReCommondViewController: UITableViewController {
     
     func setUpTableView() {
         
-//        tableView.allowsSelection = false
         tableView.register(UINib.init(nibName: HynHotBannerCell.className(), bundle: nil), forCellReuseIdentifier: HynHotBannerCell.className())
         tableView.register(UINib.init(nibName: HynReCommondArticleCell.className(), bundle: nil), forCellReuseIdentifier: HynReCommondArticleCell.className())
         
@@ -41,37 +41,28 @@ extension HynReCommondViewController {
     
     func addRefresh() {
         
-        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-        loadingView.tintColor = UIColor(red: 254/255.0, green: 196/255.0, blue: 62/255.0, alpha: 1.0)
-        tableView.dg_addPullToRefreshWithActionHandler({ 
+        self.tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
+            self.currentPage = 1
+            self.tableView.mj_footer.resetNoMoreData()
             self.requstData()
-            }, loadingView: loadingView)
-        tableView.dg_setPullToRefreshFillColor(tableView.backgroundColor!)
-        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+        })
         
-        /**tableView.addRefreshHeader { [weak self] () in
-            self?.currentPage = 1
-            self?.requstData()
-        }
+        self.tableView.mj_footer = MJRefreshAutoNormalFooter.init(refreshingBlock: {
+            self.currentPage = self.currentPage + 1
+            self.requstData()
+        })
         
-        tableView.hyn_addRefreshFooter { [weak self] () in
-            self?.currentPage = (self?.currentPage)! + 1
-            self?.requstData()
-        }
-         */
-
     }
     
     @objc fileprivate func headerRefresh() {
         
-        //self.tableView.hyn_headerEndRefreshing()
         self.tableView.dg_stopLoading()
         self.tableView.reloadData()
+        
     }
     
     @objc fileprivate func footerRefresh() {
         
-        //self.tableView.hyn_footerEndRefreshing()
         self.tableView.reloadData()
         
     }
@@ -88,23 +79,27 @@ extension RecommondRequestData {
             guard (resultArray != nil) else {
                 return
             }
-//            if self?.currentPage == 1 {
+            
+            if (self?.currentPage)! > 1 {
+                /// 上拉加载更多
+                if resultArray?.count == 0 {
+                    self?.tableView.mj_footer.endRefreshingWithNoMoreData()
+                }
+                else {
+                    self?.dataArray = (self?.dataArray)!+resultArray!
+                    self?.tableView.reloadData()
+                    self?.tableView.mj_footer.endRefreshing()
+                }
+                
+            
+            }
+            else {
                 //下拉刷新
-                self?.dataArray = resultArray
-                self?.headerRefresh()
-//            }
-            /**else {
-                //上拉加载更多
-                for recommondArticleModel in resultArray! {
-                    self?.dataArray?.append(recommondArticleModel)
-                }
-                
-                self?.footerRefresh()
-                
-                if resultArray?.count == 0  {
-                    self?.tableView.hyn_refreshDataLoadOver()
-                }
-            }*/
+                self?.dataArray = resultArray!
+                self?.tableView.reloadData()
+                self?.tableView.mj_header.endRefreshing()
+            }
+            
         }
     }
 }
@@ -123,10 +118,7 @@ typealias HynBetterDelegate = HynReCommondViewController
 extension HynBetterDelegate {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard (dataArray != nil) else {
-            return 1
-        }
-        return (dataArray?.count)! + 1
+        return dataArray.count + 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -142,13 +134,10 @@ extension HynBetterDelegate {
         }
         else {
             let cell:HynReCommondArticleCell = tableView.dequeueReusableCell(withIdentifier: HynReCommondArticleCell.className(), for: indexPath) as! HynReCommondArticleCell
-            guard dataArray != nil else {
-                return cell
-            }
-            cell.reCommondArticleModel = self.dataArray?[indexPath.row-1]
+            cell.reCommondArticleModel = self.dataArray[indexPath.row-1]
             cell.likeDidClick = { [weak self] (is_liked,like_num) in
-                self?.dataArray?[indexPath.row-1].is_liked = is_liked
-                self?.dataArray?[indexPath.row-1].like_num = like_num
+                self?.dataArray[indexPath.row-1].is_liked = is_liked
+                self?.dataArray[indexPath.row-1].like_num = like_num
             }
             return cell
             
@@ -161,19 +150,19 @@ extension HynBetterDelegate {
         if indexPath.row == 0 {
             return 205
         }
-        guard dataArray != nil else {
-            return 126 + 30 + 5 + 140 + dataArray![indexPath.row-1].contentHeight!
+        guard dataArray.count != 0 else {
+            return 126 + 30 + 5 + 140 + dataArray[indexPath.row-1].contentHeight!
         }
-        let height = dataArray![indexPath.row-1].coverPic?.picSize?.height
+        let height = dataArray[indexPath.row-1].coverPic?.picSize?.height
         
-        return height! + 30 + 5 + 100 + dataArray![indexPath.row-1].contentHeight!
+        return height! + 30 + 5 + 100 + dataArray[indexPath.row-1].contentHeight!
         
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row > 0 {
             let topicVC = HynTopicViewController.topicVC()
-            topicVC.articleId = dataArray?[indexPath.row-1].id
+            topicVC.articleId = dataArray[indexPath.row-1].id
             self.navigationController?.pushViewController(topicVC, animated: true)
         }
     }

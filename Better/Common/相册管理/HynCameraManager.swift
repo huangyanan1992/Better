@@ -17,22 +17,19 @@ class HynCameraManager: NSObject {
     /// - Parameters:
     ///   - complite: 获取权限成功回调
     static func requestCameraAuthorizationStatus(complite:@escaping (()->())) {
+        
         PHPhotoLibrary.requestAuthorization { (status) in
             if status == .authorized {
                 complite()
             }
+            else {
+                SQAlert.showAlert(title: "提示", message: "照片权限没开启，请开启相册权限", cancle: {
+                    
+                }, confirm: {
+                    UIApplication.shared.canOpenURL(URL.init(string: "prefs:root=Photos")!)
+                })
+            }
         }
     }
-    
-    static func isCameraAvailable(complite:(()->())) {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            complite()
-        }
-        else {
-            print("没有摄像机")
-        }
-    }
-    
-    
 
 }
