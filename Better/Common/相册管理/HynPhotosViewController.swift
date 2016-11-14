@@ -225,6 +225,7 @@ extension HynPhotosViewController:UICollectionViewDelegateFlowLayout,UICollectio
         else {
             
             HynCameraManager.requestCameraAuthorizationStatus(complite: {  [weak self] in
+                
                 HynCameraManager.isCameraAvailable {
                     let imagePickerViewController = HynImagePickerController.init()
                     
