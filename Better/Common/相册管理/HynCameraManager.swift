@@ -24,6 +24,15 @@ class HynCameraManager: NSObject {
         }
     }
     
+    static func isCameraAvailable(complite:(()->())) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            complite()
+        }
+        else {
+            print("没有摄像机")
+        }
+    }
+    
     
 
 }

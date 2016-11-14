@@ -20,8 +20,8 @@ class HynPhotosViewController: UIViewController {
     /// 选中的照片
     var imagesDidSelected:((_ selectedAsset:[PHAsset])->())?
     
-    ///已选中的indexPath.row和图片
-    var selectedImages:[(Int,PHAsset)] = [] {
+    ///已选中的相册和indexPath.row和图片
+    var selectedImages:[PHAsset] = [] {
         didSet {
             if selectedImages.count == 0 {
                 nextButton.isHidden = true
@@ -36,6 +36,9 @@ class HynPhotosViewController: UIViewController {
     typealias cameraImageClosure = (_ image:UIImage)->()
     fileprivate var cameraImage:cameraImageClosure?
     
+    /// 相机照片
+    ///
+    /// - Parameter image: 拍照获得的照片
     func requestCameraImage(image:@escaping cameraImageClosure) {
         cameraImage = image
     }
@@ -156,7 +159,7 @@ extension HynPhotosViewController {
         guard (imagesDidSelected != nil) else {
             return
         }
-        imagesDidSelected!(self.selectedImages.flatMap{$0.1})
+        imagesDidSelected!(self.selectedImages.flatMap{$0})
         dismiss(animated: true, completion: nil)
     }
     
@@ -181,7 +184,7 @@ extension HynPhotosViewController:UICollectionViewDelegateFlowLayout,UICollectio
             ///设置选中的顺序
             for i in 0..<selectedImages.count {
                 ///当前照片是否是选中的，是显示选中效果，和选中的次序
-                if selectedImages[i].1.localIdentifier == currentAlbum[indexPath.row-1].localIdentifier {
+                if selectedImages[i].localIdentifier == currentAlbum[indexPath.row-1].localIdentifier {
                     cell.imgIsSelected = true
                     cell.count = i
                 }
@@ -209,40 +212,35 @@ extension HynPhotosViewController:UICollectionViewDelegateFlowLayout,UICollectio
                     cell.imgIsSelected = !cell.imgIsSelected
                     return
                 }
-                selectedImages.append((indexPath.row,(self.currentAlbum[indexPath.row-1])))
+                selectedImages.append(self.currentAlbum[indexPath.row-1])
             }
             else {
                 let index = Int(cell.selectedNum.text!)
                 selectedImages.remove(at: index!-1)
             }
             
-            ///刷新选中的图片效果，主要是为了修改，count值，即选中的次序
-            let indexPaths:[IndexPath] = self.selectedImages.flatMap {
-                
-                IndexPath.init(row: $0.0, section: 0)
-                
-            }
-
-            self.collectionView.reloadItems(at: indexPaths)
+            self.collectionView.reloadData()
             
         }
         else {
             
             HynCameraManager.requestCameraAuthorizationStatus(complite: {  [weak self] in
-                let imagePickerViewController = HynImagePickerController.init()
-                
-                imagePickerViewController.requstImage(finish: { (image) in
-                    guard (self?.cameraImage != nil) else {
-                        return
-                    }
-                    self?.cameraImage!(image)
+                HynCameraManager.isCameraAvailable {
+                    let imagePickerViewController = HynImagePickerController.init()
                     
-                    DispatchQueue.main.async {
-                        self?.dismiss(animated: false, completion: nil)
-                    }
-                    
-                })
-                self?.present(imagePickerViewController, animated: true, completion: nil)
+                    imagePickerViewController.requstImage(finish: { (image) in
+                        guard (self?.cameraImage != nil) else {
+                            return
+                        }
+                        self?.cameraImage!(image)
+                        
+                        DispatchQueue.main.async {
+                            self?.dismiss(animated: false, completion: nil)
+                        }
+                        
+                    })
+                    self?.present(imagePickerViewController, animated: true, completion: nil)
+                }
             })
             
         }

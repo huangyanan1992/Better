@@ -28,6 +28,7 @@ class HynAlbumView: UIView {
     }
     
     var selectedAlbumClosure:((_ albumItem:HynAlbumItem)->())?
+    var selectedRow:Int = 0
     
     var tapDidClick:(()->())?
     
@@ -114,6 +115,7 @@ extension HynAlbumView {
     }
     
     private func convertCollection(assetCollections:PHFetchResult<PHAssetCollection>) {
+        
         for i in 0..<assetCollections.count{
             //获取出但前相簿内的图片
             let resultsOptions = PHFetchOptions()

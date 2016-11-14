@@ -29,9 +29,12 @@ class HynImagePickerNavController: HynNavController {
     typealias cameraImageClosure = (_ image:UIImage)->()
     private var cameraImage:cameraImageClosure?
     
+    
+    /// 相机照片
+    ///
+    /// - Parameter image: 相机照片
     func requestCameraImage(image:@escaping cameraImageClosure) {
         cameraImage = image
-//        self.dismiss(animated: true, completion: nil)
     }
     
 
@@ -47,25 +50,19 @@ class HynImagePickerNavController: HynNavController {
         super.viewDidLoad()
         
         view.backgroundColor = HynThemeManager.shared.backgroundColor
-        
-        PHPhotoLibrary.requestAuthorization { [weak self] (status) in
+        HynCameraManager.requestCameraAuthorizationStatus {
             
-            if status == .authorized {
-                
-                self?.setViewControllers([(self?.photosViewController)!], animated: true)
-                self?.photosViewController.imagesDidSelected = {
-                    guard (self?.imagesDidSelected != nil) else {
-                        return
-                    }
-                    self?.imagesDidSelected!($0)
+            self.setViewControllers([(self.photosViewController)], animated: true)
+            self.photosViewController.imagesDidSelected = {
+                guard (self.imagesDidSelected != nil) else {
+                    return
                 }
-                self?.photosViewController.requestCameraImage(image: { (image) in
-                    self?.cameraImage!(image)
-                })
+                self.imagesDidSelected!($0)
             }
+            self.photosViewController.requestCameraImage(image: { (image) in
+                self.cameraImage!(image)
+            })
         }
-        
-        
     }
 
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 相机
 class HynImagePickerController: UIImagePickerController {
     
     typealias finish = ((_ image:UIImage)->())
