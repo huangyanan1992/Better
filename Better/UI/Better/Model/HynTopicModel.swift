@@ -25,7 +25,6 @@ struct HynTopicModel:HandyJSON {
         HynRequestManager.request(type: .Post, urlString: RequestUrl.getArticle.rawValue, parameter: param) { (resultJson, error) in
             
             let dataJson = resultJson?["data"]
-//            let dic = dataJson?.dictionary
             let topicDic = NSDictionary.init(dictionary: (dataJson?.dictionaryObject!)!, copyItems: false)
             var topicModel = JSONDeserializer<HynTopicModel>.deserializeFrom(dict: topicDic)
             

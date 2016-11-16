@@ -223,8 +223,8 @@ extension HynPhotosViewController:UICollectionViewDelegateFlowLayout,UICollectio
             
         }
         else {
-            
-            HynCameraManager.requestCameraAuthorizationStatus(complite: {  [weak self] in
+            HynCameraManager.requestCameraAuthorizationStatus { [weak self] in
+                
                 guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
                     return
                 }
@@ -244,7 +244,7 @@ extension HynPhotosViewController:UICollectionViewDelegateFlowLayout,UICollectio
                 })
                 self?.present(imagePickerViewController, animated: true, completion: nil)
                 
-            })
+            }
             
         }
     }

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xEI-Mw-mXX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xEI-Mw-mXX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="t5l-Yf-LRE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rv0-Ng-Yqr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOj-Ma-2Iq">
-                                <frame key="frameInset" minX="192" minY="328" width="31" height="30"/>
+                                <rect key="frame" x="192" y="328" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="相册"/>
                                 <connections>
@@ -39,7 +43,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="HynNewestViewController" id="iLc-Cf-LBE" customClass="HynNewestViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="M78-sm-rAX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
@@ -61,7 +65,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Vyo-nO-mn8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ryA-8B-b6B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -80,10 +84,11 @@
                         <viewControllerLayoutGuide type="bottom" id="LeE-P4-f0m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qV6-Cy-Xsd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0C-Bp-3sP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="Bvh-67-tlg" kind="embed" id="tXG-yd-G6p"/>
@@ -123,7 +128,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="HynReCommondViewController" id="iTW-mB-TQH" customClass="HynReCommondViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hjd-hq-PXl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
@@ -140,16 +145,17 @@
         <!--Hyn Web View Controller-->
         <scene sceneID="oCq-pF-zEZ">
             <objects>
-                <viewController storyboardIdentifier="HynWebViewController" id="ebF-SL-TVy" customClass="HynWebViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HynWebViewController" automaticallyAdjustsScrollViewInsets="NO" id="ebF-SL-TVy" customClass="HynWebViewController" customModule="Better" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fih-3f-fJi"/>
                         <viewControllerLayoutGuide type="bottom" id="ZvZ-uO-ivb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qmk-cm-M79">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2oK-8y-D5Q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="ebF-SL-TVy" id="M9G-Hl-vL6"/>
@@ -158,12 +164,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZvZ-uO-ivb" firstAttribute="top" secondItem="2oK-8y-D5Q" secondAttribute="bottom" id="Kta-YN-w9Y"/>
+                            <constraint firstItem="ZvZ-uO-ivb" firstAttribute="top" secondItem="2oK-8y-D5Q" secondAttribute="bottom" constant="-64" id="Kta-YN-w9Y"/>
                             <constraint firstItem="2oK-8y-D5Q" firstAttribute="leading" secondItem="Qmk-cm-M79" secondAttribute="leading" id="PC3-fK-Bog"/>
                             <constraint firstAttribute="trailing" secondItem="2oK-8y-D5Q" secondAttribute="trailing" id="Spi-aQ-FYH"/>
-                            <constraint firstItem="2oK-8y-D5Q" firstAttribute="top" secondItem="Fih-3f-fJi" secondAttribute="bottom" constant="-64" id="ijl-aM-xnb"/>
+                            <constraint firstItem="2oK-8y-D5Q" firstAttribute="top" secondItem="Fih-3f-fJi" secondAttribute="bottom" id="ijl-aM-xnb"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="webView" destination="2oK-8y-D5Q" id="8HM-NJ-pJE"/>
                     </connections>
@@ -181,7 +189,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2J3-Pn-Npe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZRS-DC-ggW">
-                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -332,7 +340,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Tj7-ls-Yfh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="G2r-ha-vHJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -387,7 +395,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8ev-un-HQc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="slU-6m-JJL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

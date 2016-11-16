@@ -17,7 +17,7 @@ class HynChannelViewController: UIViewController {
     
     @IBAction func test(_ sender: UIButton) {
         
-        HynCameraManager.requestCameraAuthorizationStatus { [weak self] (_) in
+        HynCameraManager.requestPhotosAuthorizationStatus { [weak self] (_) in
             
             let imagePickerVC = HynImagePickerNavController.init()
             self?.present(imagePickerVC, animated: true, completion: nil)
