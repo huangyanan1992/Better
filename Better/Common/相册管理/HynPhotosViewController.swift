@@ -223,6 +223,7 @@ extension HynPhotosViewController:UICollectionViewDelegateFlowLayout,UICollectio
             
         }
         else {
+            
             HynCameraManager.requestCameraAuthorizationStatus { [weak self] in
                 
                 guard UIImagePickerController.isSourceTypeAvailable(.camera) else {

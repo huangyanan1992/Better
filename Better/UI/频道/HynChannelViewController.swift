@@ -16,17 +16,19 @@ class HynChannelViewController: UIViewController {
     }
     
     @IBAction func test(_ sender: UIButton) {
-        
+        ///获取相册权限
         HynCameraManager.requestPhotosAuthorizationStatus { [weak self] (_) in
             
             let imagePickerVC = HynImagePickerNavController.init()
             self?.present(imagePickerVC, animated: true, completion: nil)
             
             imagePickerVC.imagesDidSelected = {
+                ///相册多图选择
                 print($0)
             }
             
             imagePickerVC.requestCameraImage { (image) in
+                ///相机拍照
                 print(image)
             }
         }

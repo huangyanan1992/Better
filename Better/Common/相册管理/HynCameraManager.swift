@@ -62,8 +62,10 @@ class HynCameraManager: NSObject {
             // 未授权
             SQAlert.showAlert(title: "提示", message: "相机权限没开启，请开启相机权限", cancle: {
                 
-            }, confirm: { 
+            }, confirm: {
+                
                 UIApplication.shared.canOpenURL(URL.init(string: "prefs:root=Privacy&path=CAMERA")!)
+                
             })
             return false
         }else{
