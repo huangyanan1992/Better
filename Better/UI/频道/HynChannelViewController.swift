@@ -22,10 +22,10 @@ class HynChannelViewController: UIViewController {
             let imagePickerVC = HynImagePickerNavController.init()
             self?.present(imagePickerVC, animated: true, completion: nil)
             
-            imagePickerVC.imagesDidSelected = {
+            imagePickerVC.requestImages(images: { (asserts, images) in
                 ///相册多图选择
-                print($0)
-            }
+                print(images)
+            })
             
             imagePickerVC.requestCameraImage { (image) in
                 ///相机拍照

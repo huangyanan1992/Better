@@ -10,6 +10,18 @@
 		285BE21C098B616969DAD0F1 /* Pods_Better.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96F36AF6D3CCF05748B037D /* Pods_Better.framework */; };
 		9A191BE41DC1D39A00AA88F3 /* HynLikeNumCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A191BE21DC1D39A00AA88F3 /* HynLikeNumCollectionCell.swift */; };
 		9A191BE51DC1D39A00AA88F3 /* HynLikeNumCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A191BE31DC1D39A00AA88F3 /* HynLikeNumCollectionCell.xib */; };
+		9A1BEB251DDD572300EB44CE /* HynAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BEB1D1DDD572300EB44CE /* HynAlbumCell.swift */; };
+		9A1BEB261DDD572300EB44CE /* HynAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1BEB1E1DDD572300EB44CE /* HynAlbumCell.xib */; };
+		9A1BEB271DDD572300EB44CE /* HynAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BEB1F1DDD572300EB44CE /* HynAlbumView.swift */; };
+		9A1BEB281DDD572300EB44CE /* HynAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1BEB201DDD572300EB44CE /* HynAlbumView.xib */; };
+		9A1BEB291DDD572300EB44CE /* HynCameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BEB211DDD572300EB44CE /* HynCameraCell.swift */; };
+		9A1BEB2A1DDD572300EB44CE /* HynCameraCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1BEB221DDD572300EB44CE /* HynCameraCell.xib */; };
+		9A1BEB2B1DDD572300EB44CE /* HynImagePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BEB231DDD572300EB44CE /* HynImagePickerCell.swift */; };
+		9A1BEB2C1DDD572300EB44CE /* HynImagePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1BEB241DDD572300EB44CE /* HynImagePickerCell.xib */; };
+		9A1BEB2F1DDD575200EB44CE /* HynPhotoBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BEB2D1DDD575200EB44CE /* HynPhotoBrowserCell.swift */; };
+		9A1BEB301DDD575200EB44CE /* HynPhotoBrowserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1BEB2E1DDD575200EB44CE /* HynPhotoBrowserCell.xib */; };
+		9A1BEB321DDD5C3D00EB44CE /* HynPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BEB311DDD5C3D00EB44CE /* HynPhotoBrowser.swift */; };
+		9A1BEB341DDD5C6900EB44CE /* HynPhotoBrowser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1BEB331DDD5C6900EB44CE /* HynPhotoBrowser.xib */; };
 		9A1D54191DB5BC7A00AFB56F /* HynHotBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D54171DB5BC7A00AFB56F /* HynHotBannerCell.swift */; };
 		9A1D541A1DB5BC7A00AFB56F /* HynHotBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A1D54181DB5BC7A00AFB56F /* HynHotBannerCell.xib */; };
 		9A1D541F1DB5C70300AFB56F /* HynReCommondArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1D541E1DB5C70300AFB56F /* HynReCommondArticleModel.swift */; };
@@ -22,15 +34,7 @@
 		9A54CFEE1DD9608B000625E4 /* SQAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A54CFED1DD9608B000625E4 /* SQAlert.swift */; };
 		9A54CFF01DD9859B000625E4 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A54CFEF1DD9859B000625E4 /* MJRefresh.framework */; };
 		9A5500041DC2F887006C7409 /* HynNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5500031DC2F887006C7409 /* HynNavController.swift */; };
-		9A8F09D41DD169D80030D2EB /* HynImagePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F09D21DD169D80030D2EB /* HynImagePickerCell.swift */; };
-		9A8F09D51DD169D80030D2EB /* HynImagePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8F09D31DD169D80030D2EB /* HynImagePickerCell.xib */; };
 		9A8F09D81DD177140030D2EB /* HynAlbumItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F09D71DD177140030D2EB /* HynAlbumItem.swift */; };
-		9A8F09DB1DD1C24F0030D2EB /* HynCameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F09D91DD1C24F0030D2EB /* HynCameraCell.swift */; };
-		9A8F09DC1DD1C24F0030D2EB /* HynCameraCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8F09DA1DD1C24F0030D2EB /* HynCameraCell.xib */; };
-		9A8F09DE1DD1CCCC0030D2EB /* HynAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F09DD1DD1CCCC0030D2EB /* HynAlbumView.swift */; };
-		9A8F09E01DD1CCDC0030D2EB /* HynAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8F09DF1DD1CCDC0030D2EB /* HynAlbumView.xib */; };
-		9A8F09E31DD1CE5E0030D2EB /* HynAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F09E11DD1CE5E0030D2EB /* HynAlbumCell.swift */; };
-		9A8F09E41DD1CE5E0030D2EB /* HynAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8F09E21DD1CE5E0030D2EB /* HynAlbumCell.xib */; };
 		9AA10AE01DC0BCE900E89729 /* HynLikeMemberCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA10ADE1DC0BCE900E89729 /* HynLikeMemberCollectionCell.swift */; };
 		9AA10AE11DC0BCE900E89729 /* HynLikeMemberCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AA10ADF1DC0BCE900E89729 /* HynLikeMemberCollectionCell.xib */; };
 		9AAA7E301DC9B4CA00FC8BB4 /* HynEmotionBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA7E2F1DC9B4CA00FC8BB4 /* HynEmotionBottomView.swift */; };
@@ -188,6 +192,18 @@
 		94E9E2A7034A815ABB057EAB /* Pods-Better.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Better.release.xcconfig"; path = "Pods/Target Support Files/Pods-Better/Pods-Better.release.xcconfig"; sourceTree = "<group>"; };
 		9A191BE21DC1D39A00AA88F3 /* HynLikeNumCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynLikeNumCollectionCell.swift; sourceTree = "<group>"; };
 		9A191BE31DC1D39A00AA88F3 /* HynLikeNumCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynLikeNumCollectionCell.xib; sourceTree = "<group>"; };
+		9A1BEB1D1DDD572300EB44CE /* HynAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynAlbumCell.swift; sourceTree = "<group>"; };
+		9A1BEB1E1DDD572300EB44CE /* HynAlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynAlbumCell.xib; sourceTree = "<group>"; };
+		9A1BEB1F1DDD572300EB44CE /* HynAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynAlbumView.swift; sourceTree = "<group>"; };
+		9A1BEB201DDD572300EB44CE /* HynAlbumView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynAlbumView.xib; sourceTree = "<group>"; };
+		9A1BEB211DDD572300EB44CE /* HynCameraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynCameraCell.swift; sourceTree = "<group>"; };
+		9A1BEB221DDD572300EB44CE /* HynCameraCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynCameraCell.xib; sourceTree = "<group>"; };
+		9A1BEB231DDD572300EB44CE /* HynImagePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynImagePickerCell.swift; sourceTree = "<group>"; };
+		9A1BEB241DDD572300EB44CE /* HynImagePickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynImagePickerCell.xib; sourceTree = "<group>"; };
+		9A1BEB2D1DDD575200EB44CE /* HynPhotoBrowserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynPhotoBrowserCell.swift; sourceTree = "<group>"; };
+		9A1BEB2E1DDD575200EB44CE /* HynPhotoBrowserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynPhotoBrowserCell.xib; sourceTree = "<group>"; };
+		9A1BEB311DDD5C3D00EB44CE /* HynPhotoBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynPhotoBrowser.swift; sourceTree = "<group>"; };
+		9A1BEB331DDD5C6900EB44CE /* HynPhotoBrowser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynPhotoBrowser.xib; sourceTree = "<group>"; };
 		9A1D54171DB5BC7A00AFB56F /* HynHotBannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynHotBannerCell.swift; sourceTree = "<group>"; };
 		9A1D54181DB5BC7A00AFB56F /* HynHotBannerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynHotBannerCell.xib; sourceTree = "<group>"; };
 		9A1D541E1DB5C70300AFB56F /* HynReCommondArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynReCommondArticleModel.swift; sourceTree = "<group>"; };
@@ -200,15 +216,7 @@
 		9A54CFED1DD9608B000625E4 /* SQAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQAlert.swift; sourceTree = "<group>"; };
 		9A54CFEF1DD9859B000625E4 /* MJRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJRefresh.framework; path = "../../../Library/Developer/Xcode/DerivedData/Better-ejqjpeshlrvcbxfngswvwhimzzbh/Build/Products/Debug-iphonesimulator/MJRefresh/MJRefresh.framework"; sourceTree = "<group>"; };
 		9A5500031DC2F887006C7409 /* HynNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynNavController.swift; sourceTree = "<group>"; };
-		9A8F09D21DD169D80030D2EB /* HynImagePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynImagePickerCell.swift; sourceTree = "<group>"; };
-		9A8F09D31DD169D80030D2EB /* HynImagePickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynImagePickerCell.xib; sourceTree = "<group>"; };
 		9A8F09D71DD177140030D2EB /* HynAlbumItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynAlbumItem.swift; sourceTree = "<group>"; };
-		9A8F09D91DD1C24F0030D2EB /* HynCameraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynCameraCell.swift; sourceTree = "<group>"; };
-		9A8F09DA1DD1C24F0030D2EB /* HynCameraCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynCameraCell.xib; sourceTree = "<group>"; };
-		9A8F09DD1DD1CCCC0030D2EB /* HynAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynAlbumView.swift; sourceTree = "<group>"; };
-		9A8F09DF1DD1CCDC0030D2EB /* HynAlbumView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynAlbumView.xib; sourceTree = "<group>"; };
-		9A8F09E11DD1CE5E0030D2EB /* HynAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynAlbumCell.swift; sourceTree = "<group>"; };
-		9A8F09E21DD1CE5E0030D2EB /* HynAlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynAlbumCell.xib; sourceTree = "<group>"; };
 		9AA10ADE1DC0BCE900E89729 /* HynLikeMemberCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynLikeMemberCollectionCell.swift; sourceTree = "<group>"; };
 		9AA10ADF1DC0BCE900E89729 /* HynLikeMemberCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HynLikeMemberCollectionCell.xib; sourceTree = "<group>"; };
 		9AAA7E2F1DC9B4CA00FC8BB4 /* HynEmotionBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HynEmotionBottomView.swift; sourceTree = "<group>"; };
@@ -390,6 +398,40 @@
 				C96F36AF6D3CCF05748B037D /* Pods_Better.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A1BEB181DDD571200EB44CE /* 图片浏览 */ = {
+			isa = PBXGroup;
+			children = (
+				9A1BEB311DDD5C3D00EB44CE /* HynPhotoBrowser.swift */,
+				9A1BEB331DDD5C6900EB44CE /* HynPhotoBrowser.xib */,
+				9A1BEB1A1DDD571200EB44CE /* View */,
+			);
+			path = "图片浏览";
+			sourceTree = "<group>";
+		};
+		9A1BEB1A1DDD571200EB44CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A1BEB2D1DDD575200EB44CE /* HynPhotoBrowserCell.swift */,
+				9A1BEB2E1DDD575200EB44CE /* HynPhotoBrowserCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A1BEB1C1DDD572300EB44CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A1BEB1D1DDD572300EB44CE /* HynAlbumCell.swift */,
+				9A1BEB1E1DDD572300EB44CE /* HynAlbumCell.xib */,
+				9A1BEB1F1DDD572300EB44CE /* HynAlbumView.swift */,
+				9A1BEB201DDD572300EB44CE /* HynAlbumView.xib */,
+				9A1BEB211DDD572300EB44CE /* HynCameraCell.swift */,
+				9A1BEB221DDD572300EB44CE /* HynCameraCell.xib */,
+				9A1BEB231DDD572300EB44CE /* HynImagePickerCell.swift */,
+				9A1BEB241DDD572300EB44CE /* HynImagePickerCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9A1D54161DB5BC5600AFB56F /* View */ = {
@@ -688,19 +730,13 @@
 		9AE506C51DCB2BCA006F6808 /* 相册管理 */ = {
 			isa = PBXGroup;
 			children = (
+				9A1BEB181DDD571200EB44CE /* 图片浏览 */,
 				9A8F09D61DD176F20030D2EB /* Model */,
+				9A1BEB1C1DDD572300EB44CE /* View */,
 				9AAFC5541DD024F800F6892F /* HynImagePickerNavController.swift */,
 				9AAFC5561DD02AB600F6892F /* HynPhotosViewController.swift */,
 				9ADB06881DD4499D00959CB5 /* HynCameraManager.swift */,
 				9ADB068A1DD44EE400959CB5 /* HynImagePickerController.swift */,
-				9A8F09D21DD169D80030D2EB /* HynImagePickerCell.swift */,
-				9A8F09D31DD169D80030D2EB /* HynImagePickerCell.xib */,
-				9A8F09D91DD1C24F0030D2EB /* HynCameraCell.swift */,
-				9A8F09DA1DD1C24F0030D2EB /* HynCameraCell.xib */,
-				9A8F09DD1DD1CCCC0030D2EB /* HynAlbumView.swift */,
-				9A8F09DF1DD1CCDC0030D2EB /* HynAlbumView.xib */,
-				9A8F09E11DD1CE5E0030D2EB /* HynAlbumCell.swift */,
-				9A8F09E21DD1CE5E0030D2EB /* HynAlbumCell.xib */,
 			);
 			path = "相册管理";
 			sourceTree = "<group>";
@@ -931,6 +967,7 @@
 				9AD4F42F1DB757C300A4487B /* 发怒.png in Resources */,
 				9AD4F4701DB757C300A4487B /* 晕了.png in Resources */,
 				9AD4F43F1DB757C300A4487B /* 惊叹.png in Resources */,
+				9A1BEB2A1DDD572300EB44CE /* HynCameraCell.xib in Resources */,
 				9AD4F4321DB757C300A4487B /* 尴尬.png in Resources */,
 				9AD4F43D1DB757C300A4487B /* 惊呆.png in Resources */,
 				9AD4F46E1DB757C300A4487B /* 又疯了.png in Resources */,
@@ -948,10 +985,10 @@
 				9AD4F4551DB757C300A4487B /* 色.png in Resources */,
 				9AD4F4561DB757C300A4487B /* 伤心.png in Resources */,
 				9AD4F4541DB757C300A4487B /* 丧气.png in Resources */,
-				9A8F09DC1DD1C24F0030D2EB /* HynCameraCell.xib in Resources */,
 				9AD4F4511DB757C300A4487B /* 亲亲.png in Resources */,
 				9AD4F4441DB757C300A4487B /* 抠鼻.png in Resources */,
 				9AB1B3641DC88FF400111740 /* HynEmotionTextView.xib in Resources */,
+				9A1BEB301DDD575200EB44CE /* HynPhotoBrowserCell.xib in Resources */,
 				9AF03E141DC0885E009DC21C /* HynCommonCell.xib in Resources */,
 				9AD4F4251DB757C300A4487B /* 闭嘴.png in Resources */,
 				9AD4F4421DB757C300A4487B /* 可爱.png in Resources */,
@@ -961,15 +998,14 @@
 				9ADF99CA1DB0B0A900C8D4AC /* LaunchScreen.storyboard in Resources */,
 				9AD4F4651DB757C300A4487B /* 吸血鬼.png in Resources */,
 				9AD4F44D1DB757C300A4487B /* 撇嘴.png in Resources */,
-				9A8F09D51DD169D80030D2EB /* HynImagePickerCell.xib in Resources */,
 				9AD4F4631DB757C300A4487B /* 无视.png in Resources */,
 				9A1D54251DB5D32A00AFB56F /* HynReCommondArticleCell.xib in Resources */,
 				9AD4F45A1DB757C300A4487B /* 失望.png in Resources */,
 				9AD4F45F1DB757C300A4487B /* 微笑.png in Resources */,
-				9A8F09E41DD1CE5E0030D2EB /* HynAlbumCell.xib in Resources */,
 				9AD4F44B1DB757C300A4487B /* 默认签到表情.png in Resources */,
 				9AD4F4611DB757C300A4487B /* 无聊.png in Resources */,
 				9AD4F4681DB757C300A4487B /* 小舌头.png in Resources */,
+				9A1BEB341DDD5C6900EB44CE /* HynPhotoBrowser.xib in Resources */,
 				9A1D541A1DB5BC7A00AFB56F /* HynHotBannerCell.xib in Resources */,
 				9AF03E021DC05879009DC21C /* HynArticleCell.xib in Resources */,
 				9AD4F4591DB757C300A4487B /* 胜利.png in Resources */,
@@ -979,11 +1015,12 @@
 				9AD4F47B1DB7583D00A4487B /* SignInFace.plist in Resources */,
 				9AD4F45B1DB757C300A4487B /* 睡觉.png in Resources */,
 				9AD4F4711DB757C300A4487B /* 再见.png in Resources */,
-				9A8F09E01DD1CCDC0030D2EB /* HynAlbumView.xib in Resources */,
+				9A1BEB281DDD572300EB44CE /* HynAlbumView.xib in Resources */,
 				9AD4F4291DB757C300A4487B /* 大拇指.png in Resources */,
 				9ADF99C71DB0B0A900C8D4AC /* Assets.xcassets in Resources */,
 				9AD4F4431DB757C300A4487B /* 可怜.png in Resources */,
 				9AD4F4401DB757C300A4487B /* 惊吓.png in Resources */,
+				9A1BEB261DDD572300EB44CE /* HynAlbumCell.xib in Resources */,
 				9AAA7E321DC9B4D900FC8BB4 /* HynEmotionBottomView.xib in Resources */,
 				9AD4F4221DB757C300A4487B /* 暴怒.png in Resources */,
 				9AD4F45D1DB757C300A4487B /* 头晕.png in Resources */,
@@ -998,6 +1035,7 @@
 				9AD4F43C1DB757C300A4487B /* 奸笑.png in Resources */,
 				9AD4F4771DB7580A00A4487B /* BetterFaceName.plist in Resources */,
 				9AF03E101DC08226009DC21C /* HynCommondNumView.xib in Resources */,
+				9A1BEB2C1DDD572300EB44CE /* HynImagePickerCell.xib in Resources */,
 				9A191BE51DC1D39A00AA88F3 /* HynLikeNumCollectionCell.xib in Resources */,
 				9AD4F4721DB757C300A4487B /* 赞.png in Resources */,
 				9AD4F42B1DB757C300A4487B /* 呆萌.png in Resources */,
@@ -1081,6 +1119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AC45DFB1DC35B4300B52A16 /* HynEmotionKeyBoard.swift in Sources */,
+				9A1BEB2B1DDD572300EB44CE /* HynImagePickerCell.swift in Sources */,
 				9AFCE0BC1DB0EAEB00C97633 /* RAMFrameItemAnimation.swift in Sources */,
 				9AFCE0C01DB0EAEB00C97633 /* RAMAnimatedTabBarController.swift in Sources */,
 				9A2D8B5B1DC86706003A1C35 /* HynEmotionScrollView.swift in Sources */,
@@ -1094,7 +1133,7 @@
 				9AB1B3621DC88FE000111740 /* HynEmotionTextView.swift in Sources */,
 				9AFCE0691DB0CF3F00C97633 /* HynChannelViewController.swift in Sources */,
 				9A191BE41DC1D39A00AA88F3 /* HynLikeNumCollectionCell.swift in Sources */,
-				9A8F09DE1DD1CCCC0030D2EB /* HynAlbumView.swift in Sources */,
+				9A1BEB251DDD572300EB44CE /* HynAlbumCell.swift in Sources */,
 				9AAFC5551DD024F800F6892F /* HynImagePickerNavController.swift in Sources */,
 				9AF1C3DC1DB8CA970017B6ED /* HynThemeManager.swift in Sources */,
 				9ADF9A6A1DB0B5E500C8D4AC /* SwiftyJSON.swift in Sources */,
@@ -1103,9 +1142,9 @@
 				9AF03E131DC0885E009DC21C /* HynCommonCell.swift in Sources */,
 				9ADB06891DD4499D00959CB5 /* HynCameraManager.swift in Sources */,
 				9AAFC5571DD02AB600F6892F /* HynPhotosViewController.swift in Sources */,
+				9A1BEB2F1DDD575200EB44CE /* HynPhotoBrowserCell.swift in Sources */,
 				9AF03E091DC06230009DC21C /* HynLikeMembersCell.swift in Sources */,
 				9AB189FA1DB77F7B00AB1003 /* HynHomeViewController.swift in Sources */,
-				9A8F09D41DD169D80030D2EB /* HynImagePickerCell.swift in Sources */,
 				9ADF99C21DB0B0A900C8D4AC /* ViewController.swift in Sources */,
 				9ADF99C01DB0B0A900C8D4AC /* AppDelegate.swift in Sources */,
 				9AF03DFA1DC0448A009DC21C /* HynArticle.swift in Sources */,
@@ -1116,13 +1155,15 @@
 				9AF03DF61DC041AA009DC21C /* HynTopicViewController.swift in Sources */,
 				9AF03DFE1DC04E30009DC21C /* HynCommondModel.swift in Sources */,
 				9ADB07051DD458C700959CB5 /* HelpingMapper.swift in Sources */,
+				9A1BEB321DDD5C3D00EB44CE /* HynPhotoBrowser.swift in Sources */,
 				9ADB07031DD458C700959CB5 /* Converter.swift in Sources */,
 				9ADB07041DD458C700959CB5 /* Extension.swift in Sources */,
 				9AAA7E301DC9B4CA00FC8BB4 /* HynEmotionBottomView.swift in Sources */,
 				9A1D54271DB5EE7D00AFB56F /* HynFunc.swift in Sources */,
+				9A1BEB271DDD572300EB44CE /* HynAlbumView.swift in Sources */,
+				9A1BEB291DDD572300EB44CE /* HynCameraCell.swift in Sources */,
 				9AF03DFC1DC04BD2009DC21C /* HynUserModel.swift in Sources */,
 				9AEEFFBD1DB4BC6000166C35 /* HynHotModel.swift in Sources */,
-				9A8F09DB1DD1C24F0030D2EB /* HynCameraCell.swift in Sources */,
 				9AFCE0BB1DB0EAEB00C97633 /* RAMBounceAnimation.swift in Sources */,
 				9A5500041DC2F887006C7409 /* HynNavController.swift in Sources */,
 				9AF03E0F1DC08226009DC21C /* HynCommondNumView.swift in Sources */,
@@ -1139,7 +1180,6 @@
 				9AF03DF81DC043C1009DC21C /* HynTopicModel.swift in Sources */,
 				9ADB070A1DD458C700959CB5 /* JSONDeserializer.swift in Sources */,
 				9ADB070C1DD458C700959CB5 /* Property.swift in Sources */,
-				9A8F09E31DD1CE5E0030D2EB /* HynAlbumCell.swift in Sources */,
 				9AE506C41DCB2BAC006F6808 /* HynCircleView.swift in Sources */,
 				9A1D54211DB5CCDC00AFB56F /* HynBetterUrls.swift in Sources */,
 				9AA10AE01DC0BCE900E89729 /* HynLikeMemberCollectionCell.swift in Sources */,

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HynImagePickerCell" id="gTV-IL-0wX" customClass="HynImagePickerCell" customModule="Better" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vnl-um-Miz">
+                        <rect key="frame" x="2" y="2" width="46" height="46"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hE7-ER-s4b">
+                        <rect key="frame" x="2" y="2" width="46" height="46"/>
+                        <state key="normal" backgroundImage="photo_check_selected"/>
+                        <connections>
+                            <action selector="checkSelectAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="U21-NK-1mM"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVI-GE-YZP">
+                        <rect key="frame" x="28" y="2" width="20" height="20"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.76470588240000004" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="Udr-t1-M7b"/>
+                            <constraint firstAttribute="height" constant="20" id="ldx-uB-FSG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="hyn_cornerRadios">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Wj-03-qOA">
+                        <rect key="frame" x="28" y="2" width="20" height="20"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="KWF-Pe-RDL"/>
+                            <constraint firstAttribute="width" constant="20" id="iy4-iy-Hz8"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="hyn_cornerRadios">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="hyn_borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="hyn_borderColor">
+                                <color key="value" red="0.99607843139999996" green="0.76470588240000004" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="selectAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="1uK-h7-aS3"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="vnl-um-Miz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="3ZV-1y-noz"/>
+                <constraint firstAttribute="bottom" secondItem="vnl-um-Miz" secondAttribute="bottom" constant="2" id="3jd-a4-KLZ"/>
+                <constraint firstAttribute="trailing" secondItem="hE7-ER-s4b" secondAttribute="trailing" constant="2" id="90j-YS-aGz"/>
+                <constraint firstItem="oVI-GE-YZP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="9ke-FG-lMU"/>
+                <constraint firstAttribute="trailing" secondItem="vnl-um-Miz" secondAttribute="trailing" constant="2" id="G44-LL-QiX"/>
+                <constraint firstAttribute="bottom" secondItem="hE7-ER-s4b" secondAttribute="bottom" constant="2" id="JLe-r3-f1T"/>
+                <constraint firstAttribute="trailing" secondItem="oVI-GE-YZP" secondAttribute="trailing" constant="2" id="JpR-Lo-ovL"/>
+                <constraint firstItem="vnl-um-Miz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="Vcm-Ok-SLh"/>
+                <constraint firstItem="hE7-ER-s4b" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="b1r-ja-BOI"/>
+                <constraint firstAttribute="trailing" secondItem="2Wj-03-qOA" secondAttribute="trailing" constant="2" id="hTV-4S-BUW"/>
+                <constraint firstItem="2Wj-03-qOA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="kxQ-u2-ecV"/>
+                <constraint firstItem="hE7-ER-s4b" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="qdW-cJ-qXQ"/>
+            </constraints>
+            <connections>
+                <outlet property="checkSelectBtn" destination="hE7-ER-s4b" id="mGz-4d-xSm"/>
+                <outlet property="pickerImage" destination="vnl-um-Miz" id="VL1-zo-jbF"/>
+                <outlet property="selectedBtn" destination="2Wj-03-qOA" id="cUP-TM-cao"/>
+                <outlet property="selectedNum" destination="oVI-GE-YZP" id="EXQ-1K-G05"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="photo_check_selected" width="50" height="50"/>
+    </resources>
+</document>

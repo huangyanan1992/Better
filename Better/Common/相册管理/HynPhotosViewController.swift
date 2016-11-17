@@ -17,11 +17,15 @@ class HynPhotosViewController: UIViewController {
     /// 当前选中相册的所有照片
     var currentAlbum:[PHAsset] = []
     
-    /// 选中的照片
-    var imagesDidSelected:((_ selectedAsset:[PHAsset])->())?
+    /// 照片
+    var images:[UIImage] = []
     
-    ///已选中的相册和indexPath.row和图片
-    var selectedImages:[PHAsset] = [] {
+    /// 选中的照片
+    var imagesDidSelected:((_ selectedAsset:[PHAsset],_ images:[UIImage])->())?
+    
+    
+    ///已选中的相册的图片
+    var selectedImages:[(PHAsset,UIImage)] = [] {
         didSet {
             if selectedImages.count == 0 {
                 nextButton.isHidden = true
@@ -45,6 +49,7 @@ class HynPhotosViewController: UIViewController {
     
     ///标题
     lazy var titleButton:UIButton = {
+        
         let button = UIButton.init(frame: CGRect(x: (.screenWidth()-100)/2.0, y: 0, width: 100, height: 30))
         button.setTitleColor(UIColor.black, for: .normal)
         button.titleLabel?.textAlignment = .center
@@ -52,6 +57,7 @@ class HynPhotosViewController: UIViewController {
         button.isSelected = true
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         return button
+        
     }()
     
     ///下一步
@@ -79,8 +85,17 @@ class HynPhotosViewController: UIViewController {
     }()
     
     fileprivate lazy var albumView:HynAlbumView = {
+        
         let albumView = HynAlbumView.initWithNib() as! HynAlbumView
         return albumView
+        
+    }()
+    
+    fileprivate lazy var photoBrowser:HynPhotoBrowser = {
+        
+        let photoBrowser:HynPhotoBrowser = HynPhotoBrowser.initWithNib() as! HynPhotoBrowser
+        return photoBrowser
+        
     }()
     
     override func viewDidLoad() {
@@ -88,11 +103,23 @@ class HynPhotosViewController: UIViewController {
         
         setUpBackBtn()
         setUpSubViews()
+        loadImage()
         
     }
     
     deinit {
         print("deinit")
+    }
+    
+    private func loadImage() {
+        
+        for asset in currentAlbum {
+            let requestOPtion = PHImageRequestOptions.init()
+            requestOPtion.resizeMode = .exact
+            PHCachingImageManager.default().requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .aspectFit, options: nil, resultHandler: { (image, nil) in
+                self.images.append(image!)
+            })
+        }
     }
 }
 
@@ -137,6 +164,8 @@ extension HynPhotosViewController {
         }
         ///加载相册数据
         albumView.loadData()
+        view.addSubview(photoBrowser)
+        photoBrowser.bringSubview(toFront: collectionView)
     
     }
     
@@ -159,7 +188,7 @@ extension HynPhotosViewController {
         guard (imagesDidSelected != nil) else {
             return
         }
-        imagesDidSelected!(self.selectedImages.flatMap{$0})
+        imagesDidSelected!(self.selectedImages.flatMap{$0.0},self.selectedImages.flatMap{$0.1})
         dismiss(animated: true, completion: nil)
     }
     
@@ -173,6 +202,7 @@ extension HynPhotosViewController:UICollectionViewDelegateFlowLayout,UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
+            
             let cell:HynCameraCell = collectionView.dequeueReusableCell(withReuseIdentifier: HynCameraCell.className(), for: indexPath) as! HynCameraCell
             return cell
             
@@ -184,11 +214,33 @@ extension HynPhotosViewController:UICollectionViewDelegateFlowLayout,UICollectio
             ///设置选中的顺序
             for i in 0..<selectedImages.count {
                 ///当前照片是否是选中的，是显示选中效果，和选中的次序
-                if selectedImages[i].localIdentifier == currentAlbum[indexPath.row-1].localIdentifier {
+                if selectedImages[i].0.localIdentifier == currentAlbum[indexPath.row-1].localIdentifier {
                     cell.imgIsSelected = true
                     cell.count = i
                 }
             }
+            
+            cell.selectImageClouser = { [weak self] (isSelected) in
+                /**
+                 * 1.如果选中，添加选中的图片到selectedImages中
+                 * 2.如果没选中，从selectedImages中移除该图片
+                 */
+                if isSelected {
+                    ///确保已选照片小于最大限制
+                    guard (self?.selectedImages.count)! < (self?.limitMaxCout)! else {
+                        cell.imgIsSelected = !cell.imgIsSelected
+                        return
+                    }
+                    self?.selectedImages.append(((self?.currentAlbum[indexPath.row-1])!,(self?.images[indexPath.row-1])!))
+                }
+                else {
+                    let index = Int(cell.selectedNum.text!)
+                    self?.selectedImages.remove(at: index!-1)
+                }
+                
+                self?.collectionView.reloadData()
+            }
+            
             return cell
         }
         
@@ -198,29 +250,9 @@ extension HynPhotosViewController:UICollectionViewDelegateFlowLayout,UICollectio
         
         if indexPath.row != 0 {
             
-            let cell:HynImagePickerCell = collectionView.cellForItem(at: indexPath) as! HynImagePickerCell
-            
-            ///改变当前图片的选中效果
-            cell.imgIsSelected = !cell.imgIsSelected
-            /**
-             * 1.如果选中，添加选中的图片到selectedImages中
-             * 2.如果没选中，从selectedImages中移除该图片
-             */
-            if cell.imgIsSelected {
-                ///确保已选照片小于最大限制
-                guard selectedImages.count < limitMaxCout else {
-                    cell.imgIsSelected = !cell.imgIsSelected
-                    return
-                }
-                selectedImages.append(self.currentAlbum[indexPath.row-1])
-            }
-            else {
-                let index = Int(cell.selectedNum.text!)
-                selectedImages.remove(at: index!-1)
-            }
-            
-            self.collectionView.reloadData()
-            
+            photoBrowser.dataArray = images
+            photoBrowser.currentIndexPath = IndexPath.init(row: indexPath.row-1, section: 0)
+            photoBrowser.show()
         }
         else {
             

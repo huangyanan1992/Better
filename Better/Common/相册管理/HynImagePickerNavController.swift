@@ -24,12 +24,17 @@ class HynImagePickerNavController: HynNavController {
     
     
     /// 选中的照片
-    var imagesDidSelected:((_ selectedAsset:[PHAsset])->())?
+//    var imagesDidSelected:((_ selectedAsset:[PHAsset],_ images:[UIImage])->())?
+    
+    typealias assertImagesClosure = (_ selectedAssets:[PHAsset],_ images:[UIImage])->()
+    private var assertImage:assertImagesClosure?
+    
+    func requestImages(images:@escaping assertImagesClosure) {
+        assertImage = images
+    }
     
     typealias cameraImageClosure = (_ image:UIImage)->()
     private var cameraImage:cameraImageClosure?
-    
-    
     /// 相机照片
     ///
     /// - Parameter image: 相机照片
@@ -52,11 +57,11 @@ class HynImagePickerNavController: HynNavController {
         view.backgroundColor = HynThemeManager.shared.backgroundColor
             
         self.setViewControllers([(self.photosViewController)], animated: true)
-        self.photosViewController.imagesDidSelected = {
-            guard (self.imagesDidSelected != nil) else {
+        self.photosViewController.imagesDidSelected = { [weak self] (asserts,images) in
+            guard (self?.assertImage != nil) else {
                 return
             }
-            self.imagesDidSelected!($0)
+            self?.assertImage!(asserts,images)
         }
         self.photosViewController.requestCameraImage(image: { [weak self] (image) in
             self?.cameraImage!(image)

@@ -12,18 +12,20 @@ import Photos
 class HynImagePickerCell: UICollectionViewCell {
 
     @IBOutlet weak var pickerImage: UIImageView!
-    @IBOutlet weak var checkSelected: UIImageView!
     @IBOutlet weak var selectedNum: UILabel!
+    @IBOutlet weak var selectedBtn: UIButton!
     
+    @IBOutlet weak var checkSelectBtn: UIButton!
     var imageId:PHImageRequestID?
+    
+    var selectImageClouser:((_ isSelected:Bool)->())?
+    
     
     var count:Int = 0 {
         didSet {
             selectedNum.text = String(format: "%d", count+1)
         }
     }
-    
-    var imageIsSelectedClosure:((_ imgIsSelected:Bool,_ imageId:PHImageRequestID)->())?
     
     
     var assert:PHAsset? {
@@ -48,10 +50,6 @@ class HynImagePickerCell: UICollectionViewCell {
             else {
                 imageUnSelected()
             }
-            guard (imageIsSelectedClosure != nil) && (imageId != nil) else {
-                return
-            }
-            imageIsSelectedClosure!(imgIsSelected,imageId!)
         }
     }
     
@@ -61,15 +59,32 @@ class HynImagePickerCell: UICollectionViewCell {
     }
     
     private func imageIsSelected() {
-        checkSelected.isHidden = false
+        checkSelectBtn.isHidden = false
         selectedNum.isHidden = false
+        selectedBtn.isHidden = true
     }
     
     private func imageUnSelected() {
-        checkSelected.isHidden = true
+        checkSelectBtn.isHidden = true
         selectedNum.isHidden = true
+        selectedBtn.isHidden = false
     }
     
+    @IBAction func selectAction(_ sender: UIButton) {
+        imgIsSelected = true
+        guard (selectImageClouser != nil) else {
+            return
+        }
+        selectImageClouser!(true)
+        
+    }
     
+    @IBAction func checkSelectAction(_ sender: UIButton) {
+        imgIsSelected = false
+        guard (selectImageClouser != nil) else {
+            return
+        }
+        selectImageClouser!(false)
+    }
 
 }
