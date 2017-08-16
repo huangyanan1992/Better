@@ -52,7 +52,7 @@ struct HynArticle:HandyJSON {
             }
             
             picsModel = pics?.components(separatedBy: "|").map({ (picString) -> picModel in
-                return picModel(pic: picString, picSize: getPicSize(picStr: picString!))
+                return picModel(pic: picString, picSize: getPicSize(picStr: picString))
             })
         }
     }

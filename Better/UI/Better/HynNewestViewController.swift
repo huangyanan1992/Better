@@ -86,9 +86,9 @@ extension HynNewestDelegate {
 //        guard dataArray.count != nil else {
 //            return 126 + 30 + 5 + 140 + dataArray[indexPath.row].contentHeight!
 //        }
-        let height = dataArray[indexPath.row].coverPic?.picSize?.height
+        let height = dataArray[indexPath.row].coverPic.picSize.height
         
-        return height! + 30 + 5 + 100 + dataArray[indexPath.row].contentHeight!
+        return height + 30 + 5 + 100 + dataArray[indexPath.row].contentHeight
         
     }
     

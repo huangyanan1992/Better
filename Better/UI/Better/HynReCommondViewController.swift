@@ -151,11 +151,11 @@ extension HynBetterDelegate {
             return 205
         }
         guard dataArray.count != 0 else {
-            return 126 + 30 + 5 + 140 + dataArray[indexPath.row-1].contentHeight!
+            return 126 + 30 + 5 + 140 + dataArray[indexPath.row-1].contentHeight
         }
-        let height = dataArray[indexPath.row-1].coverPic?.picSize?.height
+        let height = dataArray[indexPath.row-1].coverPic.picSize.height
         
-        return height! + 30 + 5 + 100 + dataArray[indexPath.row-1].contentHeight!
+        return height + 30 + 5 + 100 + dataArray[indexPath.row-1].contentHeight
         
     }
     

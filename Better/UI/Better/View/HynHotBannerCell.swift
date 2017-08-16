@@ -31,7 +31,7 @@ class HynHotBannerCell: UITableViewCell {
                 self?.cycleViewBg.addSubview(circleView)
                 let hotModelArray:[HynHotModel] = result!
                 let images:[String] = hotModelArray.map({ (hotModel) -> String in
-                    return hotModel.pic!
+                    return hotModel.pic
                 })
                 circleView.images = images
                 circleView.imageDidClick = { [weak self] index  in

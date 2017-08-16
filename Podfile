@@ -9,4 +9,6 @@ target 'Better' do
     pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
     pod 'YYText'
     pod 'MJRefresh'
+    pod 'EVReflection', '~> 4.16.3'
+    pod 'RxSwift'
 end

@@ -98,7 +98,7 @@ class HynCircleView<ImageType>: UIView,UIScrollViewDelegate {
         //从scrollView上移除所有的subview
         scrollView.subviews.forEach({$0.removeFromSuperview()})
         
-        for i in 0..<3 {
+        for i in 0..<currentImageArray.count {
             let frame = CGRect(x: self.frame.width * CGFloat(i), y: 0, width: self.frame.width, height: self.frame.height)
             let imageView = UIImageView(frame: frame)
             imageView.isUserInteractionEnabled = true

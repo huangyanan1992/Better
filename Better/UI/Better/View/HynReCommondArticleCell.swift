@@ -48,7 +48,7 @@ class HynReCommondArticleCell: UITableViewCell {
                 contentLab.attributedText = HynEmotionManager.shared.emoticonString(string: (reCommondArticleModel?.content)!, font: UIFont.systemFont(ofSize: 13),isToFloor: false)
             }
             
-            let imageUrlStr = reCommondArticleModel?.pics?.components(separatedBy: "|").first
+            let imageUrlStr = reCommondArticleModel?.pics.components(separatedBy: "|").first
             picImgView.kf.setImage(with: URL(string: imageUrlStr!) as Resource?, placeholder: UIImage.init(named: "图片占位符"), options: [.transition(.fade(1))], progressBlock: nil, completionHandler: nil)
             
             locationLab.text = reCommondArticleModel?.loc_name3

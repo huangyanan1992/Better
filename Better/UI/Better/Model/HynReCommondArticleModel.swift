@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import EVReflection
 
 /// 获取图片
 ///
@@ -39,82 +39,82 @@ func getPicSize(picStr:String) -> (width:CGFloat,height:CGFloat) {
 /// 图片模型
 struct picModel {
     /// 图片
-    var pic:String?
+    var pic:String = ""
     
     /// 图片大小
-    var picSize:(width:CGFloat,height:CGFloat)?
+    var picSize:(width:CGFloat,height:CGFloat) = (0,0)
     
 }
 
-struct HynReCommondArticleModel:HandyJSON {
+class HynReCommondArticleModel: EVObject {
     /// 频道名称
-    var channel_name:String?
+    var channel_name:String = ""
     /// 频道图片
-    var channel_pic:String?
+    var channel_pic:String = ""
     /// 昵称
-    var nickname:String?
+    var nickname:String = ""
     /// 浏览次数
-    var view_num:Int?
+    var view_num:Int = 0
     /// 头像
-    var avatar:String?
+    var avatar:String = ""
     /// 是否是频道管理者 0：否 1：是
-    var is_channel_admin:String?
+    var is_channel_admin:String = ""
     /// 频道id
-    var channel_id:Int?
+    var channel_id:Int = 0
     /// 是否点赞 0：否 1：是
-    var is_liked:Int?
+    var is_liked:Int = 0
     /// 成员id
-    var member_id:Int?
+    var member_id:Int = 0
     /// 内容
-    var content:String? {
+    var content:String = "" {
         didSet {
-            let contentStr = NSString(cString: content!.cString(using: String.Encoding.utf8)!,
+            let contentStr = NSString(cString: content.cString(using: String.Encoding.utf8)!,
                      encoding: String.Encoding.utf8.rawValue)
             contentHeight = getTextRectSize(text: contentStr!,font: UIFont.systemFont(ofSize: 13),size: CGSize(width: UIScreen.width()-30, height: 10000)).height
         }
     }
     /// id
-    var id:Int?
+    var id:Int = 0
     /// 经度
-    var geog_lat:String?
+    var geog_lat:String = ""
     /// 城市城市
-    var loc_name2:String?
+    var loc_name2:String = ""
     /// 标题
-    var title:String?
+    var title:String = ""
     /// 图片
-    var pics:String? {
+    var pics:String = "" {
         didSet {
-            let picStr = pics?.components(separatedBy: "|").first
+            let picStr = pics.components(separatedBy: "|").first
             guard (picStr != nil) else {
                 return
             }
-            coverPic = picModel(pic: picStr, picSize: getPicSize(picStr: picStr!))
+            coverPic = picModel(pic: picStr!, picSize: getPicSize(picStr: picStr!))
             
-            picsModel = pics?.components(separatedBy: "|").map({ (picString) -> picModel in
-                return picModel(pic: picString, picSize: getPicSize(picStr: picString!))
+            picsModel = pics.components(separatedBy: "|").map({ (picString) -> picModel in
+                return picModel(pic: picString, picSize: getPicSize(picStr: picString))
             })
         }
     }
     /// 具体地址
-    var loc_name3:String?
+    var loc_name3:String = ""
     /// 级别
-    var level:Int?
+    var level:Int = 0
     /// 评论数
-    var comment_num:Int?
+    var comment_num:Int = 0
     /// 点赞数
-    var like_num:Int?
+    var like_num:Int = 0
     /// 最新评论时间
-    var new_comment_time:String?
+    var new_comment_time:String = ""
     /// 纬度
-    var geog_lon:String?
+    var geog_lon:String = ""
     /// 国家地址
-    var loc_name1:String?
+    var loc_name1:String = ""
     /// 封面
-    var coverPic:picModel?
+    var coverPic:picModel = picModel(pic: "", picSize: (width: 0, height: 0))
     /// 图片
-    var picsModel:[picModel]?
+    var picsModel:[picModel] = [picModel]()
     /// 内容的高度
-    var contentHeight:CGFloat?
+    var contentHeight:CGFloat = 0.0
     
     typealias result = ([HynReCommondArticleModel]?, NSError?)->Void
     
@@ -127,19 +127,7 @@ struct HynReCommondArticleModel:HandyJSON {
             guard error == nil else {
                 return result(nil,error)
             }
-            let dataJson = resultJson?["data"]
-            let dataArray = dataJson?.array
-            var hotArray:[HynReCommondArticleModel] = Array()
-            if ((dataArray?.count) != nil) {
-                for dic:JSON in dataArray! {
-                    let hotDic = NSDictionary.init(dictionary: dic.dictionaryObject!, copyItems: false)
-                    var hotModel = JSONDeserializer<HynReCommondArticleModel>.deserializeFrom(dict: hotDic)
-                    hotModel?.pics = hotModel?.pics
-                    hotModel?.content = hotModel?.content
-                    hotArray.append(hotModel!)
-                }
-                
-            }
+            let hotArray = [HynReCommondArticleModel](json:resultJson?["data"]?.rawString())
             result(hotArray,nil)
             
         }
@@ -154,19 +142,7 @@ struct HynReCommondArticleModel:HandyJSON {
             guard error == nil else {
                 return result(nil,error)
             }
-            let dataJson = resultJson?["data"]
-            let dataArray = dataJson?.array
-            var hotArray:[HynReCommondArticleModel] = Array()
-            if ((dataArray?.count) != nil) {
-                for dic:JSON in dataArray! {
-                    let hotDic = NSDictionary.init(dictionary: dic.dictionaryObject!, copyItems: false)
-                    var hotModel = JSONDeserializer<HynReCommondArticleModel>.deserializeFrom(dict: hotDic)
-                    hotModel?.pics = hotModel?.pics
-                    hotModel?.content = hotModel?.content
-                    hotArray.append(hotModel!)
-                }
-                
-            }
+            let hotArray = [HynReCommondArticleModel](json:resultJson?["data"]?.rawString())
             result(hotArray,nil)
         }
     }

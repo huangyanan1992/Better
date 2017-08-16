@@ -163,10 +163,10 @@ extension TopicDelegate:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            guard (topicModel?.article?.picsModel != nil) else {
+            guard (topicModel?.article.picsModel != nil) else {
                 return 0
             }
-            return 2 + (topicModel?.article?.picsModel?.count)!
+            return 2 + (topicModel?.article.picsModel?.count)!
         }
         else {
             return commondArray.count
@@ -188,7 +188,7 @@ extension TopicDelegate:UITableViewDelegate,UITableViewDataSource {
                 return cell
                 
             }
-            else if indexPath.row == (topicModel?.article?.picsModel?.count)! + 1 {
+            else if indexPath.row == (topicModel?.article.picsModel?.count)! + 1 {
                 
                 let cell:HynLikeMembersCell = tableView.dequeueReusableCell(withIdentifier: HynLikeMembersCell.className(), for: indexPath) as! HynLikeMembersCell
                 cell.likes = topicModel?.likes
@@ -199,7 +199,7 @@ extension TopicDelegate:UITableViewDelegate,UITableViewDataSource {
             else {
                 
                 let cell:HynImageCell = tableView.dequeueReusableCell(withIdentifier: HynImageCell.className(), for: indexPath) as! HynImageCell
-                cell.pic = topicModel?.article?.picsModel?[indexPath.row-1]
+                cell.pic = topicModel?.article.picsModel?[indexPath.row-1]
                 return cell
                 
             }
@@ -218,7 +218,7 @@ extension TopicDelegate:UITableViewDelegate,UITableViewDataSource {
         if section == 1 {
             
             let commondNumView:HynCommondNumView = HynCommondNumView.initWithNib() as! HynCommondNumView
-            commondNumView.commond_num = topicModel?.article?.comment_num
+            commondNumView.commond_num = topicModel?.article.comment_num
             return commondNumView
             
         }
@@ -243,17 +243,17 @@ extension TopicDelegate:UITableViewDelegate,UITableViewDataSource {
         if indexPath.section == 0 {
             
             if indexPath.row == 0 {
-                return 83 + (topicModel?.article?.contentHeight)!+10
+                return 83 + (topicModel?.article.contentHeight)!+10
             }
-            else if indexPath.row <= (topicModel?.article?.picsModel?.count)! {
-                return (topicModel?.article?.picsModel?[indexPath.row-1].picSize?.height)! + 2
+            else if indexPath.row <= (topicModel?.article.picsModel?.count)! {
+                return (topicModel?.article.picsModel?[indexPath.row-1].picSize.height)! + 2
             }
             else {
                 return 44
             }
         }
         else {
-            return 83 + commondArray[indexPath.row].contentHeight!+5
+            return 83 + commondArray[indexPath.row].contentHeight+5
         }
     }
     

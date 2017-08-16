@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import EVReflection
 
-struct HynTopicModel:HandyJSON {
+class HynTopicModel:EVObject {
     
-    var article:HynArticle?
-    var likes:[HynUserModel]?
+    var article:HynArticle = HynArticle()
+    var likes:[HynUserModel] = [HynUserModel]()
     
     
     typealias result = (HynTopicModel?, NSError?)->Void
@@ -24,12 +25,7 @@ struct HynTopicModel:HandyJSON {
         
         HynRequestManager.request(type: .Post, urlString: RequestUrl.getArticle.rawValue, parameter: param) { (resultJson, error) in
             
-            let dataJson = resultJson?["data"]
-            let topicDic = NSDictionary.init(dictionary: (dataJson?.dictionaryObject!)!, copyItems: false)
-            var topicModel = JSONDeserializer<HynTopicModel>.deserializeFrom(dict: topicDic)
-            
-            topicModel?.article?.pics = topicModel?.article?.pics
-            topicModel?.article?.content = topicModel?.article?.content
+            let topicModel = HynTopicModel(json: resultJson?["data"]?.rawString())
             result(topicModel,nil)
             
         }
