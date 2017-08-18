@@ -79,7 +79,7 @@ class HynReCommondArticleCell: UITableViewCell {
             param["member_id"] = member_id as AnyObject?
             param["channel_id"] = reCommondArticleModel?.channel_id as AnyObject?
             param["type"] = 2 as AnyObject?
-            HynRequestManager.request(type: .Post, urlString: RequestUrl.likeAndCollect.rawValue, parameter: param, block: { (result, error) in
+            HynRequestManager.request(type: .Post, urlString: .likeAndCollect, parameter: param, block: { (result, error) in
                 guard (error == nil) else {
                     debugPrint("请求出错")
                     return
@@ -98,7 +98,7 @@ class HynReCommondArticleCell: UITableViewCell {
             param["member_id"] = member_id as AnyObject?
             param["type"] = 2 as AnyObject?
             
-            HynRequestManager.request(type: .Post, urlString: RequestUrl.cancelLikeORCollect.rawValue, parameter: param, block: { [weak self] (result, error) in
+            HynRequestManager.request(type: .Post, urlString: .cancelLikeORCollect, parameter: param, block: { [weak self] (result, error) in
                 guard (error == nil) else {
                     debugPrint("请求出错")
                     return

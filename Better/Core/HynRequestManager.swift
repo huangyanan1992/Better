@@ -53,7 +53,7 @@ typealias uploadClosure = ([String : JSON]?, NSError?,Int64?,Int64?,Int64?)->Voi
 
 class HynRequestManager: NSObject {
     
-    static func request<T:NSObject>(type:HynRequestType ,urlString:String, parameter:[String:AnyObject]?, block:@escaping ([T]?,NSError?)->Void) where T:EVReflectable {
+    static func request<T:NSObject>(type:HynRequestType ,urlString:RequestUrl, parameter:[String:AnyObject]?, block:@escaping ([T]?,NSError?)->Void) where T:EVReflectable {
         var param:[String:AnyObject] = ["login_member_id":login_member_id as AnyObject,"token":token as AnyObject]
         
         if (parameter != nil) {
@@ -84,7 +84,7 @@ class HynRequestManager: NSObject {
         }
     }
     
-    static func request<T:NSObject>(type:HynRequestType ,urlString:String, parameter:[String:AnyObject]?, block:@escaping (T?,NSError?)->Void) where T:EVReflectable {
+    static func request<T:NSObject>(type:HynRequestType ,urlString:RequestUrl, parameter:[String:AnyObject]?, block:@escaping (T?,NSError?)->Void) where T:EVReflectable {
         var param:[String:AnyObject] = ["login_member_id":login_member_id as AnyObject,"token":token as AnyObject]
         
         if (parameter != nil) {
@@ -115,7 +115,7 @@ class HynRequestManager: NSObject {
         }
     }
     //网络请求中的GET,Post
-    static func request(type:HynRequestType ,urlString:String, parameter:[String:AnyObject]?, block:@escaping sendVlesClosure) {
+    static func request(type:HynRequestType ,urlString:RequestUrl, parameter:[String:AnyObject]?, block:@escaping sendVlesClosure) {
         
         var param:[String:AnyObject] = ["login_member_id":login_member_id as AnyObject,"token":token as AnyObject]
         

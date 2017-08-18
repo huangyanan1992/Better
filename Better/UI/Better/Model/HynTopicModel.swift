@@ -23,7 +23,7 @@ class HynTopicModel:EVObject {
         param["article_id"] = articleId as AnyObject?
         param["member_id"] = login_member_id as AnyObject?
         
-        HynRequestManager.request(type: .Post, urlString: RequestUrl.getArticle.rawValue, parameter: param) { (topicModel:HynTopicModel?, error) in
+        HynRequestManager.request(type: .Post, urlString: .getArticle, parameter: param) { (topicModel:HynTopicModel?, error) in
             
             result(topicModel,nil)
             

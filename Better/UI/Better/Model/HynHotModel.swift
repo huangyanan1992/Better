@@ -23,12 +23,15 @@ class HynHotModel:EVObject {
     ///
     /// - parameter result: [HynHotModel]?
     static func getBannerList(result:@escaping result) {
-        HynRequestManager.request(type: .Post, urlString: RequestUrl.banner.rawValue, parameter: nil) { (hotArray:[HynHotModel]?, error) in
+        
+        HynRequestManager.request(type: .Post, urlString: .banner, parameter: nil) { (hotArray:[HynHotModel]?, error) in
+            
             guard (error != nil) else {
                 result(hotArray,nil)
                 return
             }
             result(nil, error)
+            
         }
     }
 }
