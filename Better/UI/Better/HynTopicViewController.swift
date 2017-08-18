@@ -166,7 +166,7 @@ extension TopicDelegate:UITableViewDelegate,UITableViewDataSource {
             guard (topicModel?.article.picsModel != nil) else {
                 return 0
             }
-            return 2 + (topicModel?.article.picsModel?.count)!
+            return 2 + (topicModel?.article.picsModel.count)!
         }
         else {
             return commondArray.count
@@ -188,7 +188,7 @@ extension TopicDelegate:UITableViewDelegate,UITableViewDataSource {
                 return cell
                 
             }
-            else if indexPath.row == (topicModel?.article.picsModel?.count)! + 1 {
+            else if indexPath.row == (topicModel?.article.picsModel.count)! + 1 {
                 
                 let cell:HynLikeMembersCell = tableView.dequeueReusableCell(withIdentifier: HynLikeMembersCell.className(), for: indexPath) as! HynLikeMembersCell
                 cell.likes = topicModel?.likes
@@ -199,7 +199,7 @@ extension TopicDelegate:UITableViewDelegate,UITableViewDataSource {
             else {
                 
                 let cell:HynImageCell = tableView.dequeueReusableCell(withIdentifier: HynImageCell.className(), for: indexPath) as! HynImageCell
-                cell.pic = topicModel?.article.picsModel?[indexPath.row-1]
+                cell.pic = topicModel?.article.picsModel[indexPath.row-1]
                 return cell
                 
             }
@@ -243,10 +243,10 @@ extension TopicDelegate:UITableViewDelegate,UITableViewDataSource {
         if indexPath.section == 0 {
             
             if indexPath.row == 0 {
-                return 83 + (topicModel?.article.contentHeight)!+10
+                return CGFloat(83 + (topicModel?.article.contentHeight)!+10)
             }
-            else if indexPath.row <= (topicModel?.article.picsModel?.count)! {
-                return (topicModel?.article.picsModel?[indexPath.row-1].picSize.height)! + 2
+            else if indexPath.row <= (topicModel?.article.picsModel.count)! {
+                return (topicModel?.article.picsModel[indexPath.row-1].picSize.height)! + 2
             }
             else {
                 return 44

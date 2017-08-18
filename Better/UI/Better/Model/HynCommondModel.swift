@@ -59,9 +59,8 @@ class HynCommondModel:EVObject {
         param["article_id"] = articleId as AnyObject?
         param["member_id"] = login_member_id as AnyObject?
         
-        HynRequestManager.request(type: .Post, urlString: RequestUrl.getComment.rawValue, parameter: param) { (resultJson, error) in
+        HynRequestManager.request(type: .Post, urlString: RequestUrl.getComment.rawValue, parameter: param) { (commondArray:[HynCommondModel]?, error) in
             
-            let commondArray = [HynCommondModel](json:resultJson?["data"]?.rawString())
             result(commondArray,nil)
             
         }

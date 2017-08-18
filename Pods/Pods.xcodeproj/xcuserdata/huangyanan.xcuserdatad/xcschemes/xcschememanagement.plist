@@ -29,7 +29,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Moya.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Better.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Result.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,7 +62,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0F5ED7AED96968F89FAD1A2F0FA37E38</key>
+		<key>1215771836B84E9F9899950098D2FF80</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>184E9A397085688EA2BEDC78BA97EB99</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,12 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>618FE27B052F3010BA2DBF96EA131357</key>
+		<key>52ACA0236F086E72B74F0A090A743D41</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>648DFF5B5A06622F5464DA01FD886D66</key>
+		<key>55A25E08FA230A4FD748BDD5C2F28933</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>58840DDD10CC58630B88263FD5976661</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,17 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BDB91C90703DAFA654B969D0292F26C8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C4944FEC314D1A66588651D006273ADE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E14A62900910444707A5504D25EC98DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6164D4E19316FFE2C960B0A9801D752</key>
 		<dict>
 			<key>primary</key>
 			<true/>

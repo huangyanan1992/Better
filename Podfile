@@ -11,4 +11,5 @@ target 'Better' do
     pod 'MJRefresh'
     pod 'EVReflection', '~> 4.16.3'
     pod 'RxSwift'
+    pod 'Moya'
 end

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import EVReflection
 
 enum HynRequestType:Int {
     case Get
@@ -51,6 +52,68 @@ typealias sendVlesClosure = ([String : JSON]?, NSError?)->Void
 typealias uploadClosure = ([String : JSON]?, NSError?,Int64?,Int64?,Int64?)->Void
 
 class HynRequestManager: NSObject {
+    
+    static func request<T:NSObject>(type:HynRequestType ,urlString:String, parameter:[String:AnyObject]?, block:@escaping ([T]?,NSError?)->Void) where T:EVReflectable {
+        var param:[String:AnyObject] = ["login_member_id":login_member_id as AnyObject,"token":token as AnyObject]
+        
+        if (parameter != nil) {
+            param += parameter!
+        }
+        
+        switch type {
+        case .Get:
+            Alamofire.request(urlString, method: .get, parameters: param, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+                guard (response.result.value != nil) else {
+                    block(nil,response.result.error as NSError?)
+                    return
+                }
+                let object:[T] = T.arrayFromJson(JSON(response.result.value as Any).dictionaryValue["data"]?.rawString())
+                block(object,nil)
+                
+            })
+            
+        case .Post:
+            Alamofire.request(urlString, method: .post, parameters: param, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+                guard (response.result.value != nil) else {
+                    block(nil,response.result.error as NSError?)
+                    return
+                }
+                let object:[T] = T.arrayFromJson(JSON(response.result.value as Any).dictionaryValue["data"]?.rawString())
+                block(object,nil)
+            })
+        }
+    }
+    
+    static func request<T:NSObject>(type:HynRequestType ,urlString:String, parameter:[String:AnyObject]?, block:@escaping (T?,NSError?)->Void) where T:EVReflectable {
+        var param:[String:AnyObject] = ["login_member_id":login_member_id as AnyObject,"token":token as AnyObject]
+        
+        if (parameter != nil) {
+            param += parameter!
+        }
+        
+        switch type {
+        case .Get:
+            Alamofire.request(urlString, method: .get, parameters: param, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+                guard (response.result.value != nil) else {
+                    block(nil,response.result.error as NSError?)
+                    return
+                }
+                let object = T(json:JSON(response.result.value as Any).dictionaryValue["data"]?.rawString())
+                block(object,nil)
+                
+            })
+            
+        case .Post:
+            Alamofire.request(urlString, method: .post, parameters: param, encoding: URLEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+                guard (response.result.value != nil) else {
+                    block(nil,response.result.error as NSError?)
+                    return
+                }
+                let object = T(json:JSON(response.result.value as Any).dictionaryValue["data"]?.rawString())
+                block(object,nil)
+            })
+        }
+    }
     //网络请求中的GET,Post
     static func request(type:HynRequestType ,urlString:String, parameter:[String:AnyObject]?, block:@escaping sendVlesClosure) {
         

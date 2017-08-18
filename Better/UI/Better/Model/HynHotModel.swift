@@ -23,9 +23,8 @@ class HynHotModel:EVObject {
     ///
     /// - parameter result: [HynHotModel]?
     static func getBannerList(result:@escaping result) {
-        HynRequestManager.request(type: .Post, urlString: RequestUrl.banner.rawValue, parameter: nil) { (resultJson, error) in
+        HynRequestManager.request(type: .Post, urlString: RequestUrl.banner.rawValue, parameter: nil) { (hotArray:[HynHotModel]?, error) in
             guard (error != nil) else {
-                let hotArray = [HynHotModel](json:resultJson?["data"]?.rawString())
                 result(hotArray,nil)
                 return
             }

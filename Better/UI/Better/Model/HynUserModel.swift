@@ -10,9 +10,9 @@ import Foundation
 
 struct HynUserModel:HandyJSON {
     /// 昵称
-    var nickname:String?
+    var nickname = ""
     /// 头像
-    var avatar:String?
+    var avatar = ""
     /// 用户id
-    var member_id:Int?
+    var member_id = 0
 }

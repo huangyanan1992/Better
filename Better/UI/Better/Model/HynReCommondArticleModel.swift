@@ -123,11 +123,10 @@ class HynReCommondArticleModel: EVObject {
         param["currentPage"] = currentPage as AnyObject?
         param["member_id"] = login_member_id as AnyObject?
         
-        HynRequestManager.request(type: .Post, urlString: RequestUrl.recommendArticle.rawValue, parameter: param) { (resultJson, error) in
+        HynRequestManager.request(type: .Post, urlString: RequestUrl.recommendArticle.rawValue, parameter: param) { (hotArray:[HynReCommondArticleModel]?, error) in
             guard error == nil else {
                 return result(nil,error)
             }
-            let hotArray = [HynReCommondArticleModel](json:resultJson?["data"]?.rawString())
             result(hotArray,nil)
             
         }
@@ -138,11 +137,10 @@ class HynReCommondArticleModel: EVObject {
         param["pagesize"] = 15 as AnyObject?
         param["member_id"] = login_member_id as AnyObject?
         
-        HynRequestManager.request(type: .Post, urlString: RequestUrl.getNewestArticle.rawValue, parameter: param) { (resultJson, error) in
+        HynRequestManager.request(type: .Post, urlString: RequestUrl.getNewestArticle.rawValue, parameter: param) { (hotArray:[HynReCommondArticleModel]?, error) in
             guard error == nil else {
                 return result(nil,error)
             }
-            let hotArray = [HynReCommondArticleModel](json:resultJson?["data"]?.rawString())
             result(hotArray,nil)
         }
     }
